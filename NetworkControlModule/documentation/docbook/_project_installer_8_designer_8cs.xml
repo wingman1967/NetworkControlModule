@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_project_installer_8_designer_8cs">
+    <title>ProjectInstaller.Designer.cs File Reference</title>
+<para>Include dependency diagram for ProjectInstaller.Designer.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_project_installer_8_designer_8cs__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for ProjectInstaller.Designer.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_project_installer_8_designer_8cs__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_network_control_module_1_1_project_installer">NetworkControlModule::ProjectInstaller</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_network_control_module">NetworkControlModule</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/hinesj/Documents/Visual Studio 2012/Projects/NetworkControlModule/NetworkControlModule/ProjectInstaller.Designer.cs</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="namespace_network_control_module">NetworkControlModule</link>
+2 {
+3 &#32;&#32;&#32;&#32;<emphasis class="keyword">partial&#32;class&#32;</emphasis>ProjectInstaller
+4 &#32;&#32;&#32;&#32;{
+<link linkend="class_network_control_module_1_1_project_installer_aeee41527b3352923fb39e671a92092ad_1aeee41527b3352923fb39e671a92092ad">8 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<link linkend="namespace_system">System</link>.ComponentModel.IContainer&#32;<link linkend="class_network_control_module_1_1_project_installer_aeee41527b3352923fb39e671a92092ad_1aeee41527b3352923fb39e671a92092ad">components</link>&#32;=&#32;null;
+9 
+<link linkend="class_network_control_module_1_1_project_installer_a0b07320d4bce5c32a4b36ff6f3a7c5b0_1a0b07320d4bce5c32a4b36ff6f3a7c5b0">14 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">protected</emphasis>&#32;<emphasis class="keyword">override</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_project_installer_a0b07320d4bce5c32a4b36ff6f3a7c5b0_1a0b07320d4bce5c32a4b36ff6f3a7c5b0">Dispose</link>(<emphasis class="keywordtype">bool</emphasis>&#32;disposing)
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(disposing&#32;&amp;&amp;&#32;(<link linkend="class_network_control_module_1_1_project_installer_aeee41527b3352923fb39e671a92092ad_1aeee41527b3352923fb39e671a92092ad">components</link>&#32;!=&#32;null))
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_project_installer_aeee41527b3352923fb39e671a92092ad_1aeee41527b3352923fb39e671a92092ad">components</link>.Dispose();
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;base.Dispose(disposing);
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+22 
+23 <emphasis class="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Component&#32;Designer&#32;generated&#32;code</emphasis>
+24 
+<link linkend="class_network_control_module_1_1_project_installer_a205c795569f8488c48caca46daffd6a1_1a205c795569f8488c48caca46daffd6a1">29 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_project_installer_a205c795569f8488c48caca46daffd6a1_1a205c795569f8488c48caca46daffd6a1">InitializeComponent</link>()
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a91d097a8ac8eb3eb96247ff0a25d0001_1a91d097a8ac8eb3eb96247ff0a25d0001">serviceProcessInstaller1</link>&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.ServiceProcess.ServiceProcessInstaller();
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a96526b7031a0429c687edf240c1ed3c5_1a96526b7031a0429c687edf240c1ed3c5">serviceInstaller1</link>&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.ServiceProcess.ServiceInstaller();
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;serviceProcessInstaller1</emphasis>
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a91d097a8ac8eb3eb96247ff0a25d0001_1a91d097a8ac8eb3eb96247ff0a25d0001">serviceProcessInstaller1</link>.Account&#32;=&#32;<link linkend="namespace_system">System</link>.ServiceProcess.ServiceAccount.LocalService;
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a91d097a8ac8eb3eb96247ff0a25d0001_1a91d097a8ac8eb3eb96247ff0a25d0001">serviceProcessInstaller1</link>.Password&#32;=&#32;null;
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a91d097a8ac8eb3eb96247ff0a25d0001_1a91d097a8ac8eb3eb96247ff0a25d0001">serviceProcessInstaller1</link>.Username&#32;=&#32;null;
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;serviceInstaller1</emphasis>
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a96526b7031a0429c687edf240c1ed3c5_1a96526b7031a0429c687edf240c1ed3c5">serviceInstaller1</link>.Description&#32;=&#32;<emphasis class="stringliteral">&quot;Network&#32;Control&#32;Module&quot;</emphasis>;
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a96526b7031a0429c687edf240c1ed3c5_1a96526b7031a0429c687edf240c1ed3c5">serviceInstaller1</link>.DisplayName&#32;=&#32;<emphasis class="stringliteral">&quot;NCM&#32;Service&quot;</emphasis>;
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a96526b7031a0429c687edf240c1ed3c5_1a96526b7031a0429c687edf240c1ed3c5">serviceInstaller1</link>.ServiceName&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_project_installer_a96526b7031a0429c687edf240c1ed3c5_1a96526b7031a0429c687edf240c1ed3c5">serviceInstaller1</link>.StartType&#32;=&#32;<link linkend="namespace_system">System</link>.ServiceProcess.ServiceStartMode.Automatic;
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;ProjectInstaller</emphasis>
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.Installers.AddRange(<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Configuration.Install.Installer[]&#32;{
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.serviceProcessInstaller1,
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.serviceInstaller1});
+52 
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+54 
+55 <emphasis class="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion</emphasis>
+56 
+<link linkend="class_network_control_module_1_1_project_installer_a91d097a8ac8eb3eb96247ff0a25d0001_1a91d097a8ac8eb3eb96247ff0a25d0001">57 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<link linkend="namespace_system">System</link>.ServiceProcess.ServiceProcessInstaller&#32;<link linkend="class_network_control_module_1_1_project_installer_a91d097a8ac8eb3eb96247ff0a25d0001_1a91d097a8ac8eb3eb96247ff0a25d0001">serviceProcessInstaller1</link>;
+<link linkend="class_network_control_module_1_1_project_installer_a96526b7031a0429c687edf240c1ed3c5_1a96526b7031a0429c687edf240c1ed3c5">58 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<link linkend="namespace_system">System</link>.ServiceProcess.ServiceInstaller&#32;<link linkend="class_network_control_module_1_1_project_installer_a96526b7031a0429c687edf240c1ed3c5_1a96526b7031a0429c687edf240c1ed3c5">serviceInstaller1</link>;
+59 &#32;&#32;&#32;&#32;}
+60 }
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_assembly_info_8cs">
+    <title>AssemblyInfo.cs File Reference</title>
+<para>Include dependency diagram for AssemblyInfo.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_assembly_info_8cs__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for AssemblyInfo.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_assembly_info_8cs__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_reflection">System::Reflection</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_runtime_1_1_compiler_services">System::Runtime::CompilerServices</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_runtime_1_1_interop_services">System::Runtime::InteropServices</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/hinesj/Documents/Visual Studio 2012/Projects/NetworkControlModule/NetworkControlModule/Properties/AssemblyInfo.cs</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Reflection;
+2 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Runtime.CompilerServices;
+3 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Runtime.InteropServices;
+4 
+5 <emphasis class="comment">//&#32;General&#32;Information&#32;about&#32;an&#32;assembly&#32;is&#32;controlled&#32;through&#32;the&#32;following&#32;</emphasis>
+6 <emphasis class="comment">//&#32;set&#32;of&#32;attributes.&#32;Change&#32;these&#32;attribute&#32;values&#32;to&#32;modify&#32;the&#32;information</emphasis>
+7 <emphasis class="comment">//&#32;associated&#32;with&#32;an&#32;assembly.</emphasis>
+8 [assembly:&#32;AssemblyTitle(<emphasis class="stringliteral">&quot;NetworkControlModule&quot;</emphasis>)]
+9 [assembly:&#32;AssemblyDescription(<emphasis class="stringliteral">&quot;&quot;</emphasis>)]
+10 [assembly:&#32;AssemblyConfiguration(<emphasis class="stringliteral">&quot;&quot;</emphasis>)]
+11 [assembly:&#32;AssemblyCompany(<emphasis class="stringliteral">&quot;&quot;</emphasis>)]
+12 [assembly:&#32;AssemblyProduct(<emphasis class="stringliteral">&quot;NetworkControlModule&quot;</emphasis>)]
+13 [assembly:&#32;AssemblyCopyright(<emphasis class="stringliteral">&quot;Copyright&#32;©&#32;&#32;2017&quot;</emphasis>)]
+14 [assembly:&#32;AssemblyTrademark(<emphasis class="stringliteral">&quot;&quot;</emphasis>)]
+15 [assembly:&#32;AssemblyCulture(<emphasis class="stringliteral">&quot;&quot;</emphasis>)]
+16 
+17 <emphasis class="comment">//&#32;Setting&#32;ComVisible&#32;to&#32;false&#32;makes&#32;the&#32;types&#32;in&#32;this&#32;assembly&#32;not&#32;visible&#32;</emphasis>
+18 <emphasis class="comment">//&#32;to&#32;COM&#32;components.&#32;&#32;If&#32;you&#32;need&#32;to&#32;access&#32;a&#32;type&#32;in&#32;this&#32;assembly&#32;from&#32;</emphasis>
+19 <emphasis class="comment">//&#32;COM,&#32;set&#32;the&#32;ComVisible&#32;attribute&#32;to&#32;true&#32;on&#32;that&#32;type.</emphasis>
+20 [assembly:&#32;ComVisible(<emphasis class="keyword">false</emphasis>)]
+21 
+22 <emphasis class="comment">//&#32;The&#32;following&#32;GUID&#32;is&#32;for&#32;the&#32;ID&#32;of&#32;the&#32;typelib&#32;if&#32;this&#32;project&#32;is&#32;exposed&#32;to&#32;COM</emphasis>
+23 [assembly:&#32;Guid(<emphasis class="stringliteral">&quot;4c56c4e3-8d9b-4bf7-8912-3bfec39c6cdb&quot;</emphasis>)]
+24 
+25 <emphasis class="comment">//&#32;Version&#32;information&#32;for&#32;an&#32;assembly&#32;consists&#32;of&#32;the&#32;following&#32;four&#32;values:</emphasis>
+26 <emphasis class="comment">//</emphasis>
+27 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;Major&#32;Version</emphasis>
+28 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;Minor&#32;Version&#32;</emphasis>
+29 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;Build&#32;Number</emphasis>
+30 <emphasis class="comment">//&#32;&#32;&#32;&#32;&#32;&#32;Revision</emphasis>
+31 <emphasis class="comment">//</emphasis>
+32 <emphasis class="comment">//&#32;You&#32;can&#32;specify&#32;all&#32;the&#32;values&#32;or&#32;you&#32;can&#32;default&#32;the&#32;Build&#32;and&#32;Revision&#32;Numbers&#32;</emphasis>
+33 <emphasis class="comment">//&#32;by&#32;using&#32;the&#32;&apos;*&apos;&#32;as&#32;shown&#32;below:</emphasis>
+34 <emphasis class="comment">//&#32;[assembly:&#32;AssemblyVersion(&quot;1.0.*&quot;)]</emphasis>
+35 [assembly:&#32;AssemblyVersion(<emphasis class="stringliteral">&quot;2.0.1.21&quot;</emphasis>)]
+36 [assembly:&#32;AssemblyFileVersion(<emphasis class="stringliteral">&quot;2.0.1.21&quot;</emphasis>)]
+    </computeroutput></literallayout>
+</section>

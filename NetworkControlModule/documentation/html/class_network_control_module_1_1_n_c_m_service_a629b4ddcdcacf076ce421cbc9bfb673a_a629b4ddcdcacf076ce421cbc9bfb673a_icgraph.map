@@ -1,0 +1,6 @@
+<map id="NetworkControlModule.NCMService.trythis" name="NetworkControlModule.NCMService.trythis">
+<area shape="rect" id="node2" href="$class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580.html#a2eb9b3d6a64f5d1f9b54beedf7776580" title="NetworkControlModule.NCMService.update\lSocket" alt="" coords="320,5,591,47"/>
+<area shape="rect" id="node3" href="$class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023.html#a71698638b0eabc511b116427dca76023" title="NetworkControlModule.NCMService.check\lConnection" alt="" coords="639,5,905,47"/>
+<area shape="rect" id="node4" href="$class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1.html#af74640813b4eb6e484be7f8f5157c1f1" title="NetworkControlModule.NCMService.timer1\l_Elapsed" alt="" coords="953,5,1220,47"/>
+<area shape="rect" id="node5" href="$class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb.html#ac3e1fb8571c4bf2f3ef682dc4942affb" title="NetworkControlModule.NCMService.\lOnStart" alt="" coords="1268,5,1499,47"/>
+</map>

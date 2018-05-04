@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_program_8cs">
+    <title>Program.cs File Reference</title>
+<para>Include dependency diagram for Program.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_program_8cs__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Program.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_program_8cs__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_network_control_module_1_1_program">NetworkControlModule::Program</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_network_control_module">NetworkControlModule</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system">System</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_collections_1_1_generic">System::Collections::Generic</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_linq">System::Linq</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_service_process">System::ServiceProcess</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_text">System::Text</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/hinesj/Documents/Visual Studio 2012/Projects/NetworkControlModule/NetworkControlModule/Program.cs</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>;
+2 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Collections.Generic;
+3 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Linq;
+4 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.ServiceProcess;
+5 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Text;
+6 
+<link linkend="namespace_network_control_module">7 </link><emphasis class="keyword">namespace&#32;</emphasis><link linkend="namespace_network_control_module">NetworkControlModule</link>
+8 {
+<link linkend="class_network_control_module_1_1_program">9 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keyword">class&#32;</emphasis><link linkend="class_network_control_module_1_1_program">Program</link>
+10 &#32;&#32;&#32;&#32;{
+<link linkend="class_network_control_module_1_1_program_accaa52b2eb019b5b90936beb08b38091_1accaa52b2eb019b5b90936beb08b38091">14 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_program_accaa52b2eb019b5b90936beb08b38091_1accaa52b2eb019b5b90936beb08b38091">Main</link>()
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ServiceBase[]&#32;ServicesToRun;
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ServicesToRun&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;ServiceBase[]&#32;
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service">NCMService</link>()&#32;
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ServiceBase.Run(ServicesToRun);
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+23 &#32;&#32;&#32;&#32;}
+24 }
+    </computeroutput></literallayout>
+</section>

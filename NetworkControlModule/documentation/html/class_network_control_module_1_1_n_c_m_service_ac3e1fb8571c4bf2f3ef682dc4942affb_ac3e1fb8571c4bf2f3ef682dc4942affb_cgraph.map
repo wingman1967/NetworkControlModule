@@ -1,0 +1,10 @@
+<map id="NetworkControlModule.NCMService.OnStart" name="NetworkControlModule.NCMService.OnStart">
+<area shape="rect" id="node2" href="$class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1.html#a828d21dbbfe5af7c6948df027994b9f1" title="NetworkControlModule.NCMService.\lCheckHosts" alt="" coords="302,39,533,80"/>
+<area shape="rect" id="node3" href="$class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1.html#af74640813b4eb6e484be7f8f5157c1f1" title="NetworkControlModule.NCMService.timer1\l_Elapsed" alt="" coords="284,104,551,145"/>
+<area shape="rect" id="node4" href="$class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023.html#a71698638b0eabc511b116427dca76023" title="NetworkControlModule.NCMService.check\lConnection" alt="" coords="599,104,865,145"/>
+<area shape="rect" id="node5" href="$class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5.html#af8284a66b3211ed8d6aabf12cef5f1d5" title="NetworkControlModule.NCMService.check\lPrimary" alt="" coords="917,5,1183,47"/>
+<area shape="rect" id="node6" href="$class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460.html#aa6270dd14da058bd30ffc1d8fcf97460" title="NetworkControlModule.NCMService.\lFailoverRecovery" alt="" coords="935,71,1165,112"/>
+<area shape="rect" id="node7" href="$class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e.html#a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e" title="NetworkControlModule.NCMService.engage\lFailoverRedirection" alt="" coords="913,136,1187,177"/>
+<area shape="rect" id="node8" href="$class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580.html#a2eb9b3d6a64f5d1f9b54beedf7776580" title="NetworkControlModule.NCMService.update\lSocket" alt="" coords="915,201,1185,243"/>
+<area shape="rect" id="node9" href="$class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a.html#a629b4ddcdcacf076ce421cbc9bfb673a" title="NetworkControlModule.NCMService.trythis" alt="" coords="1235,209,1501,235"/>
+</map>

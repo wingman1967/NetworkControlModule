@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Network Control Module for Data Acquisition</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespace_network_control_module.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_collections.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_collections_1_1_generic.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_component_model.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_configuration_1_1_install.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_data_1_1_sql_client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_diagnostics.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_i_o.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_linq.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_net.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_net_1_1_network_information.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_net_1_1_sockets.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_reflection.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_runtime_1_1_compiler_services.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_runtime_1_1_interop_services.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_service_process.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_text.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_threading.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespace_system_1_1_timers.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="class_system_1_1_configuration_1_1_install_1_1_installer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_network_control_module_1_1_n_c_m_service.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_network_control_module_1_1_program.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_network_control_module_1_1_project_installer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_service_base.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="_program_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_project_installer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_project_installer_8_designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_assembly_info_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_service1_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_service1_8_designer_8cs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Directory Documentation</title>
+        <xi:include href="dir_d051c76eebdc544d9c3d734575641c72.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

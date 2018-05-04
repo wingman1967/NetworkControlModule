@@ -1,0 +1,1076 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_service1_8cs">
+    <title>Service1.cs File Reference</title>
+<para>Include dependency diagram for Service1.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_service1_8cs__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Service1.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_service1_8cs__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_network_control_module_1_1_n_c_m_service">NetworkControlModule::NCMService</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_network_control_module">NetworkControlModule</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_data">System::Data</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_diagnostics">System::Diagnostics</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_net">System::Net</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_net_1_1_sockets">System::Net::Sockets</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_timers">System::Timers</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_threading">System::Threading</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_i_o">System::IO</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_net_1_1_network_information">System::Net::NetworkInformation</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_data_1_1_sql_client">System::Data::SqlClient</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/hinesj/Documents/Visual Studio 2012/Projects/NetworkControlModule/NetworkControlModule/Service1.cs</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>;
+2 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Collections.Generic;
+3 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.ComponentModel;
+4 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Data;
+5 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics;
+6 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Linq;
+7 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.ServiceProcess;
+8 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Text;
+9 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Net;
+10 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Net.Sockets;
+11 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Timers;
+12 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Threading;
+13 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.IO;
+14 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Net.NetworkInformation;
+15 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Data.SqlClient;
+16 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Reflection;
+17 
+18 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="namespace_network_control_module">NetworkControlModule</link>
+19 {
+<link linkend="class_network_control_module_1_1_n_c_m_service">20 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">public</emphasis>&#32;<emphasis class="keyword">partial&#32;class&#32;</emphasis><link linkend="class_network_control_module_1_1_n_c_m_service">NCMService</link>&#32;:&#32;ServiceBase
+21 &#32;&#32;&#32;&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Network&#32;Control&#32;Module&#32;(NCM)&#32;Service</emphasis>
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Author:&#32;&#32;John&#32;Hines,&#32;The&#32;Gorman-Rupp&#32;Co.</emphasis>
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//January&#32;2013</emphasis>
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Service&#32;monitors&#32;port&#32;1433&#32;for&#32;SQL&#32;server,&#32;primary&#32;host.&#32;&#32;If&#32;the&#32;SQL&#32;host&#32;becomes&#32;unavailable,&#32;service&#32;engages&#32;failover&#32;redirection</emphasis>
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//so&#32;that&#32;any&#32;running&#32;SQL&#32;applications&#32;can&#32;continue&#32;to&#32;write&#32;records&#32;to&#32;database.&#32;&#32;Once&#32;connectivity&#32;to&#32;the&#32;primary&#32;host</emphasis>
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//has&#32;been&#32;re-established,&#32;failover&#32;redirection&#32;is&#32;reversed&#32;and&#32;then&#32;any&#32;records&#32;that&#32;were&#32;written&#32;to&#32;the&#32;failover&#32;host&#32;are</emphasis>
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//copied&#32;to&#32;the&#32;primary&#32;host&#32;and&#32;then&#32;removed&#32;from&#32;the&#32;failover&#32;host.</emphasis>
+29 
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Service&#32;communicates&#32;with&#32;companion&#32;applications&#32;via&#32;socket&#32;on&#32;port&#32;3232&#32;and&#32;accepts&#32;requests/commands&#32;on&#32;port&#32;3230.</emphasis>
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//A&#32;Telnet&#32;server&#32;interface&#32;operates&#32;on&#32;port&#32;3000&#32;enabling&#32;a&#32;means&#32;of&#32;monitoring&#32;the&#32;service&#32;and&#32;current-state.</emphasis>
+32 
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//The&#32;hosts&#32;file&#32;manipulation&#32;performed&#32;by&#32;this&#32;service&#32;triggers&#32;a&#32;false-positive&#32;from&#32;Sophos.&#32;&#32;Each&#32;time&#32;service&#32;is&#32;installed</emphasis>
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//or&#32;re-installed,&#32;it&#32;must&#32;be&#32;registered&#32;with&#32;Sophos.&#32;&#32;Steps&#32;to&#32;do&#32;so&#32;are:</emphasis>
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//1.&#32;&#32;Rename&#32;hosts&#32;to&#32;hosts_HOSTBACK</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//2.&#32;&#32;COPY&#32;hosts_NCM&#32;to&#32;hosts</emphasis>
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//3.&#32;&#32;Start&#32;the&#32;NCM&#32;service.&#32;&#32;It&#32;will&#32;fail&#32;immediately&#32;twice.&#32;&#32;Each&#32;time,&#32;access&#32;Sophos&#32;Quarantine&#32;and&#32;authorize.</emphasis>
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//4.&#32;&#32;hosts&#32;should&#32;now&#32;be&#32;ok.&#32;&#32;Delete&#32;hosts_HOSTBACK</emphasis>
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a7050951d87836dba8d38530b29e04c2c_1a7050951d87836dba8d38530b29e04c2c">40 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a7050951d87836dba8d38530b29e04c2c_1a7050951d87836dba8d38530b29e04c2c">ssl</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_aca8900ea24fd0a5fc96ad29cda998f41_1aca8900ea24fd0a5fc96ad29cda998f41">41 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aca8900ea24fd0a5fc96ad29cda998f41_1aca8900ea24fd0a5fc96ad29cda998f41">maxWaitMillisec</link>&#32;=&#32;20000;
+<link linkend="class_network_control_module_1_1_n_c_m_service_aa0ec0c03f5a1e63c2dc900d8994e3543_1aa0ec0c03f5a1e63c2dc900d8994e3543">42 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aa0ec0c03f5a1e63c2dc900d8994e3543_1aa0ec0c03f5a1e63c2dc900d8994e3543">port</link>&#32;=&#32;1433;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a822c3f8f6f983fd2a445eaf2ce179042_1a822c3f8f6f983fd2a445eaf2ce179042">43 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a822c3f8f6f983fd2a445eaf2ce179042_1a822c3f8f6f983fd2a445eaf2ce179042">success</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_1ab6c3ae6d10ff37f13707e7606d411d4c">44 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Timers.Timer&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_1ab6c3ae6d10ff37f13707e7606d411d4c">timer1</link>&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Timers.Timer();
+<link linkend="class_network_control_module_1_1_n_c_m_service_afb36f8bbf843e7e513681b46f70384a0_1afb36f8bbf843e7e513681b46f70384a0">45 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_afb36f8bbf843e7e513681b46f70384a0_1afb36f8bbf843e7e513681b46f70384a0">host</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_af2d65f81e2843c3a6a83810d0bc6627d_1af2d65f81e2843c3a6a83810d0bc6627d">46 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af2d65f81e2843c3a6a83810d0bc6627d_1af2d65f81e2843c3a6a83810d0bc6627d">noFinditerator</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_af70bdd7ffaa8c8327996fd4fa7904b77_1af70bdd7ffaa8c8327996fd4fa7904b77">47 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af70bdd7ffaa8c8327996fd4fa7904b77_1af70bdd7ffaa8c8327996fd4fa7904b77">primaryHost</link>&#32;=&#32;<emphasis class="stringliteral">&quot;grcbi&quot;</emphasis>;&#32;<emphasis class="comment">//normally&#32;this&#32;will&#32;be&#32;grcbi&#32;(test&#32;with&#32;dumdum)</emphasis>
+<link linkend="class_network_control_module_1_1_n_c_m_service_a4549f05328c75ba8096aac96cd0978ce_1a4549f05328c75ba8096aac96cd0978ce">48 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a4549f05328c75ba8096aac96cd0978ce_1a4549f05328c75ba8096aac96cd0978ce">failoverHost</link>&#32;=&#32;<emphasis class="stringliteral">&quot;localhost&quot;</emphasis>;&#32;<emphasis class="comment">//normally&#32;this&#32;would&#32;be&#32;localhost&#32;(test&#32;with&#32;grcdslsql0)</emphasis>
+<link linkend="class_network_control_module_1_1_n_c_m_service_a88e9a864ebb4743a210645bd679e318d_1a88e9a864ebb4743a210645bd679e318d">49 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a88e9a864ebb4743a210645bd679e318d_1a88e9a864ebb4743a210645bd679e318d">testprimaryHost</link>&#32;=&#32;<emphasis class="stringliteral">&quot;grcbi&quot;</emphasis>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a51450ea83ed66fd2d8e8a0bde66d3fb2_1a51450ea83ed66fd2d8e8a0bde66d3fb2">50 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a51450ea83ed66fd2d8e8a0bde66d3fb2_1a51450ea83ed66fd2d8e8a0bde66d3fb2">successful</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a823af9c186f8b7e5045c27b7e227de26_1a823af9c186f8b7e5045c27b7e227de26">51 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a823af9c186f8b7e5045c27b7e227de26_1a823af9c186f8b7e5045c27b7e227de26">failOverState</link>&#32;=&#32;1;&#32;<emphasis class="comment">//default&#32;to&#32;failover,&#32;to&#32;be&#32;cleared&#32;on&#32;the&#32;first&#32;successful&#32;primary&#32;connection</emphasis>
+<link linkend="class_network_control_module_1_1_n_c_m_service_aba0aeb4a585fcc724110d66a1f27c0d7_1aba0aeb4a585fcc724110d66a1f27c0d7">52 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aba0aeb4a585fcc724110d66a1f27c0d7_1aba0aeb4a585fcc724110d66a1f27c0d7">servicePort</link>&#32;=&#32;3232;&#32;<emphasis class="comment">//the&#32;DAQ+&#32;service&#32;port</emphasis>
+<link linkend="class_network_control_module_1_1_n_c_m_service_a90c351d01d1f493fb7023356554b55b0_1a90c351d01d1f493fb7023356554b55b0">53 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a90c351d01d1f493fb7023356554b55b0_1a90c351d01d1f493fb7023356554b55b0">socketConnectAttempts</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a6da1f49b1704195520c2893fc0de3b89_1a6da1f49b1704195520c2893fc0de3b89">54 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a6da1f49b1704195520c2893fc0de3b89_1a6da1f49b1704195520c2893fc0de3b89">savehost</link>&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a6617c8dea13c53f9d4c2cec604a0370f_1a6617c8dea13c53f9d4c2cec604a0370f">55 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a6617c8dea13c53f9d4c2cec604a0370f_1a6617c8dea13c53f9d4c2cec604a0370f">nuke</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_af75b07219173586520a505c3f722bed0_1af75b07219173586520a505c3f722bed0">56 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af75b07219173586520a505c3f722bed0_1af75b07219173586520a505c3f722bed0">socketListenerThread</link>&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Threading.Thread(<emphasis class="keyword">new</emphasis>&#32;ThreadStart(<link linkend="class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_1ae3faaa41bb6fea247b7604446adcce36">incomingSocket</link>));
+<link linkend="class_network_control_module_1_1_n_c_m_service_a563d2cddc2542a5c1e5734060a62d527_1a563d2cddc2542a5c1e5734060a62d527">57 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a563d2cddc2542a5c1e5734060a62d527_1a563d2cddc2542a5c1e5734060a62d527">TelnetListenerThread</link>&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Threading.Thread(<emphasis class="keyword">new</emphasis>&#32;ThreadStart(<link linkend="class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_1ac6f190aaf7a1736cb8573971d8276b71">telnetServer</link>));
+<link linkend="class_network_control_module_1_1_n_c_m_service_acc23e0721fe2a56b83c20aca3cbb732a_1acc23e0721fe2a56b83c20aca3cbb732a">58 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_acc23e0721fe2a56b83c20aca3cbb732a_1acc23e0721fe2a56b83c20aca3cbb732a">outMessage</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a4b819f80512a24240d2f116dbd2e07c2_1a4b819f80512a24240d2f116dbd2e07c2">59 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a4b819f80512a24240d2f116dbd2e07c2_1a4b819f80512a24240d2f116dbd2e07c2">NCMServicePort</link>&#32;=&#32;3230;
+<link linkend="class_network_control_module_1_1_n_c_m_service_afe66ea01cc1afa2471e6878af261f66f_1afe66ea01cc1afa2471e6878af261f66f">60 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">const</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_afe66ea01cc1afa2471e6878af261f66f_1afe66ea01cc1afa2471e6878af261f66f">TelnetPort</link>&#32;=&#32;3231;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a7cd20c3e61895e554580c1c108c70ad0_1a7cd20c3e61895e554580c1c108c70ad0">61 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;TcpListener&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a7cd20c3e61895e554580c1c108c70ad0_1a7cd20c3e61895e554580c1c108c70ad0">tcpPrimaryListener</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_aa537ca2966e1fed6b18325fd5857060c_1aa537ca2966e1fed6b18325fd5857060c">62 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;Thread&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aa537ca2966e1fed6b18325fd5857060c_1aa537ca2966e1fed6b18325fd5857060c">listenThread</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a198846e0856da7ab59c64b64deed1724_1a198846e0856da7ab59c64b64deed1724">63 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;DateTime&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a198846e0856da7ab59c64b64deed1724_1a198846e0856da7ab59c64b64deed1724">uptimeStart</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a682ce1c27f753ecb0642a81bd7f59946_1a682ce1c27f753ecb0642a81bd7f59946">64 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;DateTime&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a682ce1c27f753ecb0642a81bd7f59946_1a682ce1c27f753ecb0642a81bd7f59946">uptimeNow</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_acd64ecc3594103d59ec4b3507dd7d5f2_1acd64ecc3594103d59ec4b3507dd7d5f2">65 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_acd64ecc3594103d59ec4b3507dd7d5f2_1acd64ecc3594103d59ec4b3507dd7d5f2">failoverCount</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a52171126067f812651e8ec600b955a4f_1a52171126067f812651e8ec600b955a4f">66 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a52171126067f812651e8ec600b955a4f_1a52171126067f812651e8ec600b955a4f">daqUpdates</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a2366654711a67324ed7f06bee5212552_1a2366654711a67324ed7f06bee5212552">67 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a2366654711a67324ed7f06bee5212552_1a2366654711a67324ed7f06bee5212552">telnetConnections</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a8f9883195ab748484398e3e9ccce736a_1a8f9883195ab748484398e3e9ccce736a">68 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a8f9883195ab748484398e3e9ccce736a_1a8f9883195ab748484398e3e9ccce736a">fullOutages</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_af6324ad1445566880df2051940007f36_1af6324ad1445566880df2051940007f36">69 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af6324ad1445566880df2051940007f36_1af6324ad1445566880df2051940007f36">recoveries</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a6e0fb6e7b9a63786ec21a7a5e2451282_1a6e0fb6e7b9a63786ec21a7a5e2451282">70 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a6e0fb6e7b9a63786ec21a7a5e2451282_1a6e0fb6e7b9a63786ec21a7a5e2451282">totalSocketReceive</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_ab1b68ac1880d7f67ffe80bec463558e8_1ab1b68ac1880d7f67ffe80bec463558e8">71 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ab1b68ac1880d7f67ffe80bec463558e8_1ab1b68ac1880d7f67ffe80bec463558e8">totalSocketTransmit</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a65abf86625998d7123c57a354adfc927_1a65abf86625998d7123c57a354adfc927">72 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a65abf86625998d7123c57a354adfc927_1a65abf86625998d7123c57a354adfc927">lastTelnetIP</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_ad69f9823fdacc5b871a51641153fe4b4_1ad69f9823fdacc5b871a51641153fe4b4">73 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ad69f9823fdacc5b871a51641153fe4b4_1ad69f9823fdacc5b871a51641153fe4b4">lastTelnetTime</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_ace92c48ec4175ca640d89283532f4187_1ace92c48ec4175ca640d89283532f4187">74 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">string</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ace92c48ec4175ca640d89283532f4187_1ace92c48ec4175ca640d89283532f4187">currentState</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a6c1df739cb198464f9ad3276e2a08db7_1a6c1df739cb198464f9ad3276e2a08db7">75 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a6c1df739cb198464f9ad3276e2a08db7_1a6c1df739cb198464f9ad3276e2a08db7">RecoveryInProgress</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a2f5f8b787ecaac67a859a5a0b059c76c_1a2f5f8b787ecaac67a859a5a0b059c76c">76 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a2f5f8b787ecaac67a859a5a0b059c76c_1a2f5f8b787ecaac67a859a5a0b059c76c">firstTimeIn</link>&#32;=&#32;1;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a17d56b15343f7ef3f57dd0bb7e0e7248_1a17d56b15343f7ef3f57dd0bb7e0e7248">77 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a17d56b15343f7ef3f57dd0bb7e0e7248_1a17d56b15343f7ef3f57dd0bb7e0e7248">primaryGood</link>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a00b9404eb670cc8753d62d9aa6de78a2_1a00b9404eb670cc8753d62d9aa6de78a2">78 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a00b9404eb670cc8753d62d9aa6de78a2_1a00b9404eb670cc8753d62d9aa6de78a2">cycleRunning</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_aa6ce1bb5b8cbce3a3162c84944d9a623_1aa6ce1bb5b8cbce3a3162c84944d9a623">79 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">int</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aa6ce1bb5b8cbce3a3162c84944d9a623_1aa6ce1bb5b8cbce3a3162c84944d9a623">goodFailoverConnect</link>&#32;=&#32;0;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a4aa4a66f2e53d0fd3327c92cc2c2c6b8_1a4aa4a66f2e53d0fd3327c92cc2c2c6b8">80 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a4aa4a66f2e53d0fd3327c92cc2c2c6b8_1a4aa4a66f2e53d0fd3327c92cc2c2c6b8">TotalFailure</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a1f12d6b4206a3faaf85ea2c9612302dd_1a1f12d6b4206a3faaf85ea2c9612302dd">81 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">bool</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a1f12d6b4206a3faaf85ea2c9612302dd_1a1f12d6b4206a3faaf85ea2c9612302dd">Processing</link>&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Commands:&#32;&#32;CONNECT,&#32;UPDATE,&#32;STATUS,&#32;TIME,&#32;QUIT</emphasis>
+84 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_1a10d46303c9150010b37d05a86dd5b08f">85 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">public</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_1a10d46303c9150010b37d05a86dd5b08f">NCMService</link>()
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_1a48c06f4755b8f175f8ec2ff75ae44086">InitializeComponent</link>();
+88 
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="namespace_system">System</link>.Diagnostics.EventLog.SourceExists(<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>))
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog.CreateEventSource(
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>);
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.Source&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.Log&#32;=&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>;
+96 
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+98 
+<link linkend="class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_1ac3e1fb8571c4bf2f3ef682dc4942affb">99 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">protected</emphasis>&#32;<emphasis class="keyword">override</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_1ac3e1fb8571c4bf2f3ef682dc4942affb">OnStart</link>(<emphasis class="keywordtype">string</emphasis>[]&#32;args)
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;NCM&#32;Service&#32;Starting&quot;</emphasis>);
+102 
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Before&#32;starting&#32;any&#32;processing,&#32;reconcile&#32;the&#32;host&#32;file.&#32;&#32;If&#32;hosts_HOSTBACK&#32;exists,&#32;a&#32;failover&#32;was&#32;in&#32;progress&#32;that&#32;wasn&apos;t</emphasis>
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//finished,&#32;possibly&#32;due&#32;to&#32;a&#32;crash&#32;or&#32;reboot&#32;of&#32;the&#32;system,&#32;as&#32;completion&#32;of&#32;a&#32;failover&#32;and&#32;start&#32;of&#32;a&#32;recovery&#32;causes&#32;that</emphasis>
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//file&#32;to&#32;be&#32;renamed&#32;to&#32;hosts&#32;(the&#32;original&#32;hosts&#32;file&#32;on&#32;the&#32;system).&#32;&#32;hosts_NCM&#32;is&#32;always&#32;copied,&#32;NOT&#32;renamed&#32;to&#32;hosts.</emphasis>
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_1a828d21dbbfe5af7c6948df027994b9f1">CheckHosts</link>();
+107 
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Start&#32;the&#32;thread&#32;for&#32;the&#32;incomingsocket&#32;listener:</emphasis>
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Thread&#32;socketListenerThread&#32;=&#32;new&#32;System.Threading.Thread(new&#32;ThreadStart(incomingSocket));</emphasis>
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uptimeStart&#32;=&#32;<link linkend="namespace_system">System</link>.DateTime.Now;
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;socketListenerThread.Start();
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TelnetListenerThread.Start();
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_1ab6c3ae6d10ff37f13707e7606d411d4c">timer1</link>.Elapsed&#32;+=&#32;<emphasis class="keyword">new</emphasis>&#32;ElapsedEventHandler(<link linkend="class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_1af74640813b4eb6e484be7f8f5157c1f1">timer1_Elapsed</link>);
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//timer1.Interval&#32;=&#32;30000;&#32;&#32;&#32;&#32;&#32;&#32;//30-second&#32;poll&#32;of&#32;SQL&#32;server&#32;port</emphasis>
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_1ab6c3ae6d10ff37f13707e7606d411d4c">timer1</link>.Interval&#32;=&#32;60000;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//one-minute&#32;interval&#32;poll&#32;of&#32;SQL&#32;server&#32;port</emphasis>
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_1ab6c3ae6d10ff37f13707e7606d411d4c">timer1</link>.Enabled&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_1ab6c3ae6d10ff37f13707e7606d411d4c">timer1</link>.Start();
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+121 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a0071afdb16b84b1a1c6044f4fadea106_1a0071afdb16b84b1a1c6044f4fadea106">122 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">protected</emphasis>&#32;<emphasis class="keyword">override</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a0071afdb16b84b1a1c6044f4fadea106_1a0071afdb16b84b1a1c6044f4fadea106">OnStop</link>()
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;NCM&#32;Service&#32;Shutting&#32;Down&quot;</emphasis>);
+125 
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Instruct&#32;the&#32;TCP&#32;socket&#32;and&#32;socketlistener&#32;thread&#32;to&#32;shutdown:</emphasis>
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;nuke&#32;=&#32;1;
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;socketListenerThread.Abort();
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+130 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_1a71698638b0eabc511b116427dca76023">131 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_1a71698638b0eabc511b116427dca76023">checkConnection</link>()
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(Processing&#32;==&#32;<emphasis class="keyword">true</emphasis>)
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Processing&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//check&#32;our&#32;primary&#32;host&#32;for&#32;connectivity&#32;on&#32;port&#32;1433&#32;(MS&#32;SQL&#32;Server)&#32;first:</emphasis>
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;successful&#32;=&#32;0;
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;foundone&#32;=&#32;0;
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(failOverState&#32;==&#32;1)
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Obtaining&#32;IP&#32;address&#32;for:&#32;&quot;</emphasis>&#32;+&#32;primaryHost);
+148 
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_1af8284a66b3211ed8d6aabf12cef5f1d5">checkPrimary</link>();
+150 
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Socket&#32;s&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;Socket(AddressFamily.InterNetwork,&#32;SocketType.Stream,&#32;ProtocolType.Tcp);
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//eventLog1.WriteEntry(&quot;Ping&#32;return&quot;);</emphasis>
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(primaryGood&#32;==&#32;1)
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TotalFailure&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IPAddress[]&#32;IPs&#32;=&#32;Dns.GetHostAddresses(primaryHost);
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Check&#32;for&#32;any&#32;IP&#32;addresses&#32;registered&#32;for&#32;the&#32;host:</emphasis>
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">foreach</emphasis>&#32;(IPAddress&#32;ip&#32;<emphasis class="keywordflow">in</emphasis>&#32;IPs)
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(failOverState&#32;==&#32;1)
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Primary&#32;Host&#32;IP:&#32;&quot;</emphasis>&#32;+&#32;Convert.ToString(ip));
+162 
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Socket&#32;s&#32;=&#32;new&#32;Socket(AddressFamily.InterNetwork,&#32;SocketType.Stream,&#32;ProtocolType.Tcp);</emphasis>
+166 
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//See&#32;if&#32;we&#32;have&#32;a&#32;valid&#32;IPv4&#32;address&#32;from&#32;the&#32;host:</emphasis>
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;foundone&#32;=&#32;0;&#32;<emphasis class="comment">//indicates&#32;we&#32;have&#32;found&#32;a&#32;valid&#32;IPv4&#32;address&#32;for&#32;the&#32;host.&#32;&#32;This&#32;indicates&#32;DNS&#32;is&#32;at&#32;least&#32;functioning.</emphasis>
+169 
+170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">foreach</emphasis>&#32;(IPAddress&#32;ip&#32;<emphasis class="keywordflow">in</emphasis>&#32;IPs)
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(ip.AddressFamily&#32;!=&#32;AddressFamily.InterNetwork)
+173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">continue</emphasis>;
+174 
+175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;foundone&#32;=&#32;1;
+176 
+177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Attempt&#32;connection&#32;to&#32;the&#32;IPv4&#32;address:</emphasis>
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Connect(ip,&#32;port);
+181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;successful&#32;=&#32;1;
+182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketTransmit&#32;+=&#32;1;
+183 
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(failOverState&#32;==&#32;1)&#32;<emphasis class="comment">//This&#32;would&#32;still&#32;be&#32;1&#32;if&#32;we&#32;are&#32;recovering&#32;from&#32;a&#32;former&#32;failover&#32;state.&#32;If&#32;0,&#32;no&#32;need&#32;to&#32;restate:</emphasis>
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Connected&#32;successfully&#32;to&#32;primary&#32;endpoint:&#32;&quot;</emphasis>&#32;+&#32;primaryHost&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;(&quot;</emphasis>&#32;+&#32;Convert.ToString(ip)&#32;+&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>);
+187 
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//If&#32;failovercount&#32;is&#32;0,&#32;we&#32;have&#32;really&#32;just&#32;started&#32;up&#32;and&#32;currentstate&#32;is&#32;primary/normal,&#32;else&#32;we&#32;are&#32;recovering:</emphasis>
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(failoverCount&#32;==&#32;0)
+190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;<emphasis class="stringliteral">&quot;Primary&#32;(Normal)&quot;</emphasis>;
+192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(firstTimeIn&#32;==&#32;1)
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_1aa6270dd14da058bd30ffc1d8fcf97460">FailoverRecovery</link>();&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//in&#32;case&#32;a&#32;previous&#32;recovery&#32;was&#32;interrupted&#32;or&#32;not&#32;carried&#32;out</emphasis>
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;firstTimeIn&#32;=&#32;0;
+196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;<emphasis class="stringliteral">&quot;Primary&#32;(Recovery)&quot;</emphasis>;
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Shutdown(SocketShutdown.Both);
+202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Close();&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//close&#32;socket&#32;so&#32;we&#32;aren&apos;t&#32;holding&#32;it&#32;open&#32;for&#32;the&#32;next&#32;cycle</emphasis>
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_1aa6270dd14da058bd30ffc1d8fcf97460">FailoverRecovery</link>();
+204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;<emphasis class="stringliteral">&quot;Primary&#32;(Normal)&quot;</emphasis>;
+205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+207 
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Shutdown(SocketShutdown.Both);
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Close();&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//close&#32;socket&#32;so&#32;we&#32;aren&apos;t&#32;holding&#32;it&#32;open&#32;for&#32;the&#32;next&#32;cycle</emphasis>
+212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//fallthru</emphasis>
+216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;failOverState&#32;=&#32;0;
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;host&#32;=&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af70bdd7ffaa8c8327996fd4fa7904b77_1af70bdd7ffaa8c8327996fd4fa7904b77">primaryHost</link>;
+220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//currentState&#32;=&#32;&quot;Primary&#32;(Normal)&quot;;</emphasis>
+221 
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(failoverCount&#32;&gt;&#32;0)
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recoveries&#32;+=&#32;1;
+225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+226 
+227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>
+229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Could&#32;not&#32;connect&#32;to&#32;primary&#32;endpoint:&#32;&quot;</emphasis>&#32;+&#32;primaryHost&#32;+&#32;<emphasis class="stringliteral">&quot;(&quot;</emphasis>&#32;+&#32;Convert.ToString(ip)&#32;+&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>);
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+232 
+233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+234 
+235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(foundone&#32;==&#32;0)
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;No&#32;IPv4&#32;address&#32;found&#32;for&#32;primary&#32;host:&#32;&quot;</emphasis>&#32;+&#32;primaryHost);
+237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Since&#32;successful&#32;is&#32;still&#32;0&#32;and&#32;we&#32;have&#32;no&#32;response&#32;from&#32;the&#32;primary,&#32;we&#32;can&#32;just&#32;go&#32;on&#32;with&#32;checking&#32;the&#32;failover</emphasis>
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(successful&#32;==&#32;0&#32;||&#32;primaryGood&#32;!=&#32;1)
+244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Attempt&#32;a&#32;connection&#32;to&#32;the&#32;failover&#32;server:</emphasis>
+246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IPAddress[]&#32;failoverIPs&#32;=&#32;Dns.GetHostAddresses(failoverHost);
+247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;failOverState&#32;=&#32;1;
+248 
+249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">foreach</emphasis>&#32;(IPAddress&#32;ip&#32;<emphasis class="keywordflow">in</emphasis>&#32;failoverIPs)
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(ip.AddressFamily&#32;!=&#32;AddressFamily.InterNetwork)
+252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">continue</emphasis>;
+253 
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;foundone&#32;=&#32;1;
+255 
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Attempt&#32;connection&#32;to&#32;the&#32;IPv4&#32;address:</emphasis>
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Connect(ip,&#32;port);
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;successful&#32;=&#32;1;
+261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TotalFailure&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketTransmit&#32;+=&#32;1;
+263 
+264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//If&#32;the&#32;host&#32;has&#32;not&#32;changed,&#32;we&#32;have&#32;already&#32;logged&#32;this,&#32;do&#32;not&#32;re-state&#32;or&#32;take&#32;other&#32;action:</emphasis>
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(savehost&#32;!=&#32;host)
+266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Connected&#32;successfully&#32;to&#32;failover&#32;endpoint:&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;(&quot;</emphasis>&#32;+&#32;Convert.ToString(ip)&#32;+&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>);
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;failoverCount&#32;+=&#32;1;
+269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+271 
+272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_1a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e">engageFailoverRedirection</link>();
+273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;host&#32;=&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a4549f05328c75ba8096aac96cd0978ce_1a4549f05328c75ba8096aac96cd0978ce">failoverHost</link>;
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;<emphasis class="stringliteral">&quot;FAILOVER&quot;</emphasis>;
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>
+277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Could&#32;not&#32;connect&#32;to&#32;failover&#32;endpoint&quot;</emphasis>);
+279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TotalFailure&#32;=&#32;<emphasis class="keyword">true</emphasis>;
+280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Only&#32;increment&#32;outage&#32;if&#32;outages&#32;and&#32;recoveries&#32;are&#32;equal,&#32;as&#32;that&#32;indicates&#32;this&#32;is&#32;a&#32;new&#32;outage:</emphasis>
+282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(fullOutages&#32;==&#32;recoveries)
+283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fullOutages&#32;+=&#32;1;
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;<emphasis class="stringliteral">&quot;OUTAGE&quot;</emphasis>;
+288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Processing&#32;=&#32;<emphasis class="keyword">false</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//ahead&#32;of&#32;time</emphasis>
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outMessage&#32;=&#32;<emphasis class="stringliteral">&quot;Connect:&quot;</emphasis>&#32;+&#32;<emphasis class="stringliteral">&quot;nohost&quot;</emphasis>&#32;+&#32;<emphasis class="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;<emphasis class="stringliteral">&quot;1&quot;</emphasis>;&#32;<emphasis class="comment">//indicate&#32;nohost&#32;due&#32;to&#32;total&#32;failure&#32;&amp;&#32;failstate</emphasis>
+290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+291 
+292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+293 
+294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Shutdown(SocketShutdown.Both);
+295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Close();&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//close&#32;socket&#32;so&#32;we&#32;aren&apos;t&#32;holding&#32;it&#32;open&#32;over&#32;the&#32;next&#32;cycle</emphasis>
+296 
+297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(foundone&#32;==&#32;0)
+298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;No&#32;IPv4&#32;address&#32;found&#32;for&#32;failover&#32;host:&#32;&quot;</emphasis>&#32;+&#32;failoverHost);
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;noFinditerator&#32;=&#32;0;
+302 
+303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(successful&#32;==&#32;1)
+304 
+305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outMessage&#32;=&#32;<emphasis class="stringliteral">&quot;Connect:&quot;</emphasis>&#32;+&#32;host&#32;+&#32;<emphasis class="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a823af9c186f8b7e5045c27b7e227de26_1a823af9c186f8b7e5045c27b7e227de26">failOverState</link>;
+306 
+307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(savehost&#32;!=&#32;host)&#32;<emphasis class="comment">//Only&#32;update&#32;the&#32;socket&#32;if&#32;the&#32;host&#32;has&#32;changed&#32;(occurs&#32;on&#32;a&#32;failover&#32;or&#32;recovery)</emphasis>
+308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//eventLog1.WriteEntry(&quot;Sending&#32;socket&#32;update&quot;);</emphasis>
+310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_1a2eb9b3d6a64f5d1f9b54beedf7776580">updateSocket</link>(<emphasis class="stringliteral">&quot;connect&quot;</emphasis>,&#32;host,&#32;failOverState);
+311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;savehost&#32;=&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_afb36f8bbf843e7e513681b46f70384a0_1afb36f8bbf843e7e513681b46f70384a0">host</link>;
+312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//just&#32;to&#32;be&#32;safe,&#32;try&#32;closing&#32;the&#32;socket&#32;again&#32;here&#32;just&#32;in&#32;case&#32;we&#32;somehow&#32;missed&#32;it</emphasis>
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Shutdown(SocketShutdown.Both);
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.Close();&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//close&#32;socket&#32;so&#32;we&#32;aren&apos;t&#32;holding&#32;it&#32;open&#32;over&#32;the&#32;next&#32;cycle</emphasis>
+319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>
+321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//fallthru&#32;(we&#32;will&#32;hit&#32;this&#32;if&#32;the&#32;socket&#32;was&#32;already&#32;closed&#32;and&#32;trying&#32;to&#32;re-close&#32;throws&#32;an&#32;exception)</emphasis>
+323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+324 
+325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//if&#32;(TotalFailure&#32;==&#32;true&#32;&amp;&amp;&#32;failOverState&#32;==&#32;1)</emphasis>
+326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//{</emphasis>
+327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;failOverState&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;//No&#32;failover&#32;since&#32;neither&#32;the&#32;primary&#32;nor&#32;the&#32;failover&#32;host&#32;is&#32;available;</emphasis>
+328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;&#32;&#32;&#32;failoverstate&#32;is&#32;only&#32;otherwise&#32;cleared&#32;after&#32;a&#32;failover&#32;-&#32;recovery&#32;has&#32;been&#32;done</emphasis>
+329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//}</emphasis>
+330 
+331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//If&#32;we&#32;are&#32;NOT&#32;in&#32;a&#32;total&#32;failure&#32;and&#32;failoverstate&#32;is&#32;NOT&#32;1,&#32;we&#32;are&#32;running&#32;on&#32;the&#32;primary.&#32;&#32;This</emphasis>
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//check&#32;is&#32;required&#32;to&#32;override&#32;any&#32;erroneous&#32;current-state&#32;setting&#32;above:</emphasis>
+333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(TotalFailure&#32;==&#32;<emphasis class="keyword">false</emphasis>&#32;&amp;&amp;&#32;failOverState&#32;!=&#32;1)
+334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentState&#32;=&#32;<emphasis class="stringliteral">&quot;Primary&#32;(Normal)&quot;</emphasis>;
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+337 
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//if&#32;we&#32;have&#32;a&#32;TotalFailure,&#32;force&#32;the&#32;state&#32;to&#32;indicate&#32;a&#32;1&#32;as&#32;the&#32;&lt;outMessage&gt;&#32;may&#32;not&#32;have&#32;updated</emphasis>
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(TotalFailure&#32;==&#32;<emphasis class="keyword">true</emphasis>)
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outMessage&#32;=&#32;<emphasis class="stringliteral">&quot;Connect:&quot;</emphasis>&#32;+&#32;host&#32;+&#32;<emphasis class="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;<emphasis class="stringliteral">&quot;1&quot;</emphasis>;
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+343 
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cycleRunning&#32;=&#32;0;
+345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Processing&#32;=&#32;<emphasis class="keyword">false</emphasis>;
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+347 
+<link linkend="class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_1af74640813b4eb6e484be7f8f5157c1f1">348 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_1af74640813b4eb6e484be7f8f5157c1f1">timer1_Elapsed</link>(<emphasis class="keywordtype">object</emphasis>&#32;sender,&#32;EventArgs&#32;e)
+349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//poll&#32;servers&#32;to&#32;see&#32;which&#32;are&#32;still&#32;responding:</emphasis>
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//noFinditerator&#32;+=&#32;1;</emphasis>
+353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(noFinditerator&#32;&gt;=&#32;2)&#32;<emphasis class="comment">//if&#32;we&#32;are&#32;2&#32;or&#32;higher,&#32;we&#32;are&#32;stuck&#32;on&#32;the&#32;dns&#32;search&#32;meaning&#32;this&#32;is&#32;an&#32;invalid&#32;host</emphasis>
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Unable&#32;to&#32;reach&#32;primary&#32;or&#32;failover&#32;endpoints&quot;</emphasis>);
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;noFinditerator&#32;=&#32;0;&#32;<emphasis class="comment">//reset&#32;for&#32;another&#32;cycle</emphasis>
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(cycleRunning&#32;==&#32;0&#32;||&#32;1&#32;==&#32;1)&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//only&#32;cycle&#32;anew&#32;if&#32;we&#32;are&#32;currently&#32;not&#32;already&#32;busy</emphasis>
+362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cycleRunning&#32;=&#32;1;
+364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//eventLog1.WriteEntry(&quot;Cycle&#32;running&quot;);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//enable&#32;when&#32;debugging</emphasis>
+366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_1a71698638b0eabc511b116427dca76023">checkConnection</link>();
+367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cycleRunning&#32;=&#32;0;
+368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//eventLog1.WriteEntry(&quot;Cycle&#32;done&quot;);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//enable&#32;when&#32;debugging</emphasis>
+370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+373 
+374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+375 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_1a2eb9b3d6a64f5d1f9b54beedf7776580">376 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_1a2eb9b3d6a64f5d1f9b54beedf7776580">updateSocket</link>(<emphasis class="keywordtype">string</emphasis>&#32;command,&#32;<emphasis class="keywordtype">string</emphasis>&#32;host,&#32;<emphasis class="keywordtype">int</emphasis>&#32;failOverIndicator)
+377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(socketConnectAttempts&#32;&gt;&#32;1)
+379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;DAQ+&#32;tcp&#32;server&#32;is&#32;not&#32;running&quot;</emphasis>);
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;socketConnectAttempts&#32;=&#32;0;
+382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+384 
+385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//socketConnectAttempts&#32;+=&#32;1;</emphasis>
+386 
+387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//send&#32;command&#32;to&#32;localhost&#32;socket,&#32;port&#32;3232&#32;consisting&#32;of:&#32;&#32;command,&#32;the&#32;connection&#32;host,&#32;and&#32;failover&#32;status</emphasis>
+388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//commands:&#32;&#32;connect,&#32;down,&#32;update</emphasis>
+389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TcpClient&#32;NCMtcpclient&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;TcpClient();
+390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Connecting&#32;to&#32;the&#32;DAQ+&#32;service&#32;socket...&quot;</emphasis>);
+391 
+392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Check&#32;the&#32;DAQ+&#32;port&#32;to&#32;see&#32;if&#32;anything&#32;is&#32;listening.&#32;&#32;If&#32;there&#32;is,&#32;connect;&#32;otherwise,&#32;flag&#32;server&#32;not&#32;running&#32;and&#32;return.</emphasis>
+393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_1a629b4ddcdcacf076ce421cbc9bfb673a">trythis</link>();
+395 
+396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(goodFailoverConnect&#32;==&#32;0)
+397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;DAQ+&#32;tcp&#32;server&#32;is&#32;not&#32;running&quot;</emphasis>);
+399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;
+400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Attempting&#32;connection...&quot;</emphasis>);
+402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Connect&#32;to&#32;the&#32;DAQ+&#32;tcp&#32;socket&#32;server:</emphasis>
+403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;NCMtcpclient.Connect(<emphasis class="stringliteral">&quot;127.0.0.1&quot;</emphasis>,&#32;servicePort);
+404 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Connected&#32;to&#32;DAQ+&#32;tcp&#32;socket&quot;</emphasis>);
+405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//setup&#32;NetworkStream&#32;object&#32;to&#32;send&#32;and/or&#32;receive&#32;some&#32;data</emphasis>
+406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;NetworkStream&#32;ourStream&#32;=&#32;NCMtcpclient.GetStream();
+407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Set&#32;up&#32;the&#32;command&#32;to&#32;be&#32;sent</emphasis>
+409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;byte[]&#32;data&#32;=&#32;Encoding.ASCII.GetBytes(command&#32;+&#32;<emphasis class="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;host&#32;+&#32;<emphasis class="stringliteral">&quot;:&quot;</emphasis>&#32;+&#32;failOverIndicator);
+410 
+411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Sending&#32;command&#32;to&#32;DAQ+&quot;</emphasis>);
+412 
+413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Send&#32;connection&#32;command&#32;to&#32;DAQ+</emphasis>
+416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ourStream.Write(data,&#32;0,&#32;data.Length);
+417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;Sent&#32;command&#32;to&#32;DAQ+&#32;:&#32;&quot;</emphasis>&#32;+&#32;command&#32;+&#32;<emphasis class="stringliteral">&quot;,&#32;&quot;</emphasis>&#32;+&#32;host&#32;+&#32;<emphasis class="stringliteral">&quot;,&#32;&quot;</emphasis>&#32;+&#32;failOverIndicator);
+418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//outMessage&#32;=&#32;command&#32;+&#32;&quot;:&quot;&#32;+&#32;host&#32;+&#32;&quot;:&quot;&#32;+&#32;failOverIndicator;</emphasis>
+419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;socketConnectAttempts&#32;=&#32;0;
+420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketTransmit&#32;+=&#32;1;
+421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>
+423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>.WriteEntry(<emphasis class="stringliteral">&quot;DAQ+&#32;tcp&#32;server&#32;is&#32;not&#32;running&quot;</emphasis>);
+425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;socketConnectAttempts&#32;=&#32;0;
+426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+427 
+428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+429 
+<link linkend="class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_1ae3faaa41bb6fea247b7604446adcce36">430 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_1ae3faaa41bb6fea247b7604446adcce36">incomingSocket</link>()
+431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;incomingCommand;
+433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;local&#32;IP&#32;address</emphasis>
+435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Net.IPAddress&#32;serverAddress&#32;=&#32;<link linkend="namespace_system">System</link>.Net.IPAddress.Parse(<emphasis class="stringliteral">&quot;127.0.0.1&quot;</emphasis>);&#32;
+436 
+437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog&#32;EventLog2&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog();
+438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="namespace_system">System</link>.Diagnostics.EventLog.SourceExists(<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>))
+439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog.CreateEventSource(
+441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>);
+442 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog2.Source&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog2.Log&#32;=&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>;
+445 
+446 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Start&#32;listening&#32;for&#32;connections&#32;on&#32;our&#32;IP&#32;address&#32;+&#32;Our&#32;Port&#32;number&#32;</emphasis>
+447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TcpListener&#32;listener&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;TcpListener(serverAddress,&#32;NCMServicePort);
+448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;listener.Start();
+449 
+450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog2.WriteEntry(<emphasis class="stringliteral">&quot;NCM&#32;Service-Port&#32;(3230)&#32;Listener&#32;started&quot;</emphasis>);
+451 
+452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(nuke&#32;==&#32;0)
+453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;Continue&#32;this&#32;listening&#32;loop&#32;until&#32;nuke&#32;is&#32;set&#32;to&#32;a&#32;non-zero&#32;value</emphasis>
+455 
+456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;watch&#32;for&#32;incoming&#32;command</emphasis>
+457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TcpClient&#32;ourTCP_Client&#32;=&#32;listener.AcceptTcpClient();
+458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog2.WriteEntry(<emphasis class="stringliteral">&quot;Incoming&#32;message&#32;on&#32;port&#32;3230&quot;</emphasis>);
+459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketReceive&#32;+=&#32;1;
+460 
+461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;daqUpdates&#32;+=&#32;1;
+462 
+463 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Create&#32;buffer&#32;for&#32;network&#32;stream</emphasis>
+464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;NetworkStream&#32;ourStream&#32;=&#32;ourTCP_Client.GetStream();
+465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;byte[]&#32;data&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;byte[ourTCP_Client.ReceiveBufferSize];
+466 
+467 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;read&#32;the&#32;incoming&#32;data&#32;stream</emphasis>
+468 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;bytesRead&#32;=&#32;ourStream.Read(data,&#32;0,&#32;<link linkend="namespace_system">System</link>.Convert.ToInt32(ourTCP_Client.ReceiveBufferSize));
+469 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;echo&#32;the&#32;data&#32;we&#32;got&#32;to&#32;the&#32;console&#32;until&#32;the&#32;newline,&#32;and&#32;delay&#32;closing&#32;our&#32;window.</emphasis>
+470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;incomingCommand&#32;=&#32;Encoding.ASCII.GetString(data,&#32;0,&#32;bytesRead);
+471 
+472 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog2.WriteEntry(incomingCommand);
+473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+474 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TcpClient&#32;NCMtcpclient&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;TcpClient();
+475 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+476 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Connect&#32;to&#32;the&#32;DAQ+&#32;tcp&#32;socket&#32;server:</emphasis>
+477 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;NCMtcpclient.Connect(<emphasis class="stringliteral">&quot;127.0.0.1&quot;</emphasis>,&#32;servicePort);
+478 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog2.WriteEntry(<emphasis class="stringliteral">&quot;Connected&#32;to&#32;DAQ+.&#32;Ready&#32;to&#32;send&#32;response:&#32;&quot;</emphasis>&#32;+&#32;outMessage);
+479 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//setup&#32;NetworkStream&#32;object&#32;to&#32;send&#32;and/or&#32;receive&#32;some&#32;data</emphasis>
+480 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;NetworkStream&#32;ourStream2&#32;=&#32;NCMtcpclient.GetStream();
+481 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog2.WriteEntry(<emphasis class="stringliteral">&quot;Stream&#32;set&#32;up.&#32;&#32;Sending&#32;response&#32;on&#32;port&#32;3232&#32;(DAQ+)...&quot;</emphasis>);
+482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingCommand&#32;==&#32;<emphasis class="stringliteral">&quot;UPDATE&quot;</emphasis>&#32;||&#32;incomingCommand&#32;==&#32;<emphasis class="stringliteral">&quot;U&quot;</emphasis>)
+483 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+484 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Set&#32;up&#32;the&#32;command&#32;to&#32;be&#32;sent</emphasis>
+485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;byte[]&#32;data2&#32;=&#32;Encoding.ASCII.GetBytes(outMessage);
+486 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ourStream2.Write(data2,&#32;0,&#32;data2.Length);
+487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketTransmit&#32;+=&#32;1;
+488 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+489 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+491 
+492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;listener.Stop();
+493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+495 
+<link linkend="class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_1ac6f190aaf7a1736cb8573971d8276b71">496 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_1ac6f190aaf7a1736cb8573971d8276b71">telnetServer</link>()
+497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Telnet&#32;server&#32;interface&#32;running&#32;on&#32;port&#32;3000</emphasis>
+499 
+500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;incomingMessage;
+501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;buildMessage&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+502 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">char</emphasis>&#32;ctrln&#32;=&#32;(char)0x0D;
+503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;outputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+504 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Byte[]&#32;myBytes13&#32;=&#32;{&#32;13&#32;};
+505 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;myStr13&#32;=&#32;<link linkend="namespace_system">System</link>.Text.Encoding.ASCII.GetString(myBytes13);
+506 
+507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog&#32;EventLog3&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog();
+508 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="namespace_system">System</link>.Diagnostics.EventLog.SourceExists(<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>))
+509 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+510 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog.CreateEventSource(
+511 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>);
+512 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+513 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog3.Source&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+514 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog3.Log&#32;=&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>;
+515 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tcpPrimaryListener&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;TcpListener(IPAddress.Any,&#32;3000);
+517 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;listenThread&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;Thread(<emphasis class="keyword">new</emphasis>&#32;ThreadStart(<link linkend="class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_1abe41fa817c46899d8af2574f1ea5be45">ListenForClients</link>));
+518 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;listenThread.Start();
+519 
+520 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog3.WriteEntry(<emphasis class="stringliteral">&quot;Telnet&#32;service-port&#32;(3000)&#32;listener&#32;started.&quot;</emphasis>);
+521 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+522 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+523 
+<link linkend="class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_1abe41fa817c46899d8af2574f1ea5be45">524 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_1abe41fa817c46899d8af2574f1ea5be45">ListenForClients</link>()
+525 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+526 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog&#32;EventLog5&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog();
+527 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="namespace_system">System</link>.Diagnostics.EventLog.SourceExists(<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>))
+528 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+529 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog.CreateEventSource(
+530 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>);
+531 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+532 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog5.Source&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+533 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog5.Log&#32;=&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>;
+534 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+535 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tcpPrimaryListener.Start();
+536 
+537 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(<emphasis class="keyword">true</emphasis>)
+538 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+539 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//blocks&#32;until&#32;a&#32;client&#32;has&#32;connected&#32;to&#32;the&#32;server</emphasis>
+540 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TcpClient&#32;client&#32;=&#32;tcpPrimaryListener.AcceptTcpClient();
+541 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+542 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog5.WriteEntry(<emphasis class="stringliteral">&quot;A&#32;Telnet&#32;client&#32;is&#32;connecting...&quot;</emphasis>);
+543 
+544 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;telnetConnections&#32;+=&#32;1;
+545 
+546 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//create&#32;a&#32;thread&#32;to&#32;handle&#32;communication&#32;</emphasis>
+547 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//with&#32;connected&#32;client</emphasis>
+548 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread&#32;clientThread&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;Thread(<emphasis class="keyword">new</emphasis>&#32;ParameterizedThreadStart(<link linkend="class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_1a9b15b44864b5712dd7837bcaf0106ede">HandleClientComm</link>));
+549 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clientThread.Start(client);
+550 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+551 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+552 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_1a9b15b44864b5712dd7837bcaf0106ede">553 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">static</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_1a9b15b44864b5712dd7837bcaf0106ede">HandleClientComm</link>(<emphasis class="keywordtype">object</emphasis>&#32;client)
+554 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+555 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TcpClient&#32;tcpClient&#32;=&#32;(TcpClient)client;
+556 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;NetworkStream&#32;clientStream&#32;=&#32;tcpClient.GetStream();
+557 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;incomingMessage&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+558 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;outputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+559 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;remoteClientIP&#32;=&#32;((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString();
+560 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+561 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog&#32;EventLog4&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog();
+562 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="namespace_system">System</link>.Diagnostics.EventLog.SourceExists(<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>))
+563 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+564 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog.CreateEventSource(
+565 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>);
+566 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+567 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog4.Source&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+568 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog4.Log&#32;=&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>;
+569 
+570 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog4.WriteEntry(<emphasis class="stringliteral">&quot;Telnet&#32;client&#32;connected:&#32;&quot;</emphasis>&#32;+&#32;remoteClientIP);
+571 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+572 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;byte[]&#32;message&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;byte[4096];
+573 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;bytesRead;
+574 
+575 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Get&#32;our&#32;starting&#32;time:</emphasis>
+576 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DateTime&#32;connecTime&#32;=&#32;DateTime.Now;
+577 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//lastTelnetTime&#32;=&#32;Convert.ToString(connecTime);</emphasis>
+578 
+579 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Retrieve&#32;assembly&#32;version</emphasis>
+580 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;AssemblyVersion&#32;=&#32;Assembly.GetExecutingAssembly().GetName().Version.ToString();
+581 
+582 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Display&#32;welcome&#32;message&#32;from&#32;the&#32;telnet&#32;server:</emphasis>
+583 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ASCIIEncoding&#32;Pencoder&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;ASCIIEncoding();
+584 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;Network&#32;Control&#32;Module&#32;(v&quot;</emphasis>&#32;+&#32;AssemblyVersion&#32;+&#32;<emphasis class="stringliteral">&quot;)&#32;-&#32;&quot;</emphasis>&#32;+&#32;<link linkend="namespace_system">System</link>.Environment.MachineName&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;(From:&#32;&quot;</emphasis>&#32;+&#32;remoteClientIP&#32;+&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Endpoint&#32;Time:&#32;&quot;</emphasis>&#32;+&#32;connecTime&#32;+&#32;Environment.NewLine&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;?-&gt;&#32;&quot;</emphasis>;
+585 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;byte[]&#32;Pbuffer&#32;=&#32;Pencoder.GetBytes(outputMessage);
+586 
+587 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clientStream.Write(Pbuffer,&#32;0,&#32;Pbuffer.Length);
+588 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clientStream.Flush();
+589 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketTransmit&#32;+=&#32;1;
+590 
+591 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">while</emphasis>&#32;(<emphasis class="keyword">true</emphasis>)
+592 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+593 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bytesRead&#32;=&#32;0;
+594 
+595 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+596 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+597 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//blocks&#32;until&#32;a&#32;client&#32;sends&#32;a&#32;message</emphasis>
+598 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bytesRead&#32;=&#32;clientStream.Read(message,&#32;0,&#32;4096);
+599 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+600 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>
+601 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+602 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//a&#32;socket&#32;error&#32;has&#32;occured</emphasis>
+603 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog4.WriteEntry(<emphasis class="stringliteral">&quot;Telnet&#32;client&#32;&quot;</emphasis>&#32;+&#32;remoteClientIP&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;has&#32;disconnected&quot;</emphasis>);
+604 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetTime&#32;=&#32;Convert.ToString(connecTime);
+605 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetIP&#32;=&#32;remoteClientIP;
+606 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+607 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+608 
+609 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(bytesRead&#32;==&#32;0)
+610 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+611 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//the&#32;client&#32;has&#32;disconnected&#32;from&#32;the&#32;server</emphasis>
+612 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog4.WriteEntry(<emphasis class="stringliteral">&quot;Telnet&#32;client&#32;&quot;</emphasis>&#32;+&#32;remoteClientIP&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;has&#32;disconnected&quot;</emphasis>);
+613 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetTime&#32;=&#32;Convert.ToString(connecTime);
+614 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetIP&#32;=&#32;remoteClientIP;
+615 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+616 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+617 
+618 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//message&#32;has&#32;successfully&#32;been&#32;received</emphasis>
+619 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ASCIIEncoding&#32;encoder&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;ASCIIEncoding();
+620 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.Debug.WriteLine(encoder.GetString(message,&#32;0,&#32;bytesRead));
+621 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;incomingMessage&#32;=&#32;encoder.GetString(message,&#32;0,&#32;bytesRead);
+622 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//incomingMessage&#32;=&#32;incomingMessage.ToUpper();</emphasis>
+623 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog4.WriteEntry(<emphasis class="stringliteral">&quot;Incoming&#32;command:&#32;&quot;</emphasis>&#32;+&#32;incomingMessage);
+624 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketReceive&#32;+=&#32;1;
+625 
+626 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//match&#32;output&#32;message&#32;to&#32;the&#32;same&#32;case&#32;we&#32;came&#32;in&#32;with</emphasis>
+627 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+628 
+629 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage.ToUpper()&#32;==&#32;<emphasis class="stringliteral">&quot;U&quot;</emphasis>)
+630 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+631 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>(incomingMessage&#32;==&#32;<emphasis class="stringliteral">&quot;u&quot;</emphasis>)
+632 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+633 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;pdate&quot;</emphasis>;
+634 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+635 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+636 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+637 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;PDATE&quot;</emphasis>;
+638 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+639 
+640 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Update</emphasis>
+641 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outputMessage&#32;=&#32;matchCaseOutputMessage&#32;+&#32;Environment.NewLine&#32;+&#32;outMessage&#32;+&#32;Environment.NewLine&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;?-&gt;&#32;&quot;</emphasis>;
+642 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+643 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage.ToUpper()&#32;==&#32;<emphasis class="stringliteral">&quot;S&quot;</emphasis>)
+644 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+645 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage&#32;==&#32;<emphasis class="stringliteral">&quot;s&quot;</emphasis>)
+646 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+647 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;tatus&quot;</emphasis>;
+648 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+649 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+650 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+651 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;TATUS&quot;</emphasis>;
+652 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+653 
+654 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//status</emphasis>
+655 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uptimeNow&#32;=&#32;<link linkend="namespace_system">System</link>.DateTime.Now;
+656 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TimeSpan&#32;totalUpTime&#32;=&#32;DateTime.Parse(Convert.ToString(uptimeNow)).Subtract(DateTime.Parse(Convert.ToString(uptimeStart)));
+657 
+658 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outputMessage&#32;=&#32;matchCaseOutputMessage&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;CURRENT&#32;STATE:&#32;&quot;</emphasis>&#32;+&#32;currentState&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Service&#32;Uptime:&#32;&quot;</emphasis>&#32;+&#32;totalUpTime&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Failovers:&#32;&quot;</emphasis>&#32;+&#32;failoverCount&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Recoveries:&#32;&quot;</emphasis>&#32;+&#32;recoveries&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Complete&#32;Outages:&#32;&quot;</emphasis>&#32;+&#32;fullOutages&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;DAQ&#32;Update&#32;Requests:&#32;&quot;</emphasis>&#32;+&#32;daqUpdates&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Telnet&#32;Connections:&#32;&quot;</emphasis>&#32;+&#32;telnetConnections&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;&#32;(Last&#32;From:&#32;&quot;</emphasis>&#32;+&#32;lastTelnetIP&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;On:&#32;&quot;</emphasis>&#32;+&#32;lastTelnetTime&#32;+&#32;<emphasis class="stringliteral">&quot;)&quot;</emphasis>&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Socket&#32;Packets&#32;Received:&#32;&quot;</emphasis>&#32;+&#32;totalSocketReceive&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Socket&#32;Packets&#32;Sent:&#32;&quot;</emphasis>&#32;+&#32;totalSocketTransmit&#32;+&#32;Environment.NewLine&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;?-&gt;&#32;&quot;</emphasis>;
+659 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+660 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage.ToUpper()&#32;==&#32;<emphasis class="stringliteral">&quot;T&quot;</emphasis>)
+661 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+662 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage&#32;==&#32;<emphasis class="stringliteral">&quot;t&quot;</emphasis>)
+663 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+664 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;ime&quot;</emphasis>;
+665 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+666 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+667 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+668 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;IME&quot;</emphasis>;
+669 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+670 
+671 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Update&#32;display&#32;of&#32;server&#32;time</emphasis>
+672 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outputMessage&#32;=&#32;matchCaseOutputMessage&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Endpoint&#32;time:&#32;&quot;</emphasis>&#32;+&#32;<link linkend="namespace_system">System</link>.DateTime.Now&#32;+&#32;Environment.NewLine&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;?-&gt;&#32;&quot;</emphasis>;
+673 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+674 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage.ToUpper()&#32;==&#32;<emphasis class="stringliteral">&quot;Q&quot;</emphasis>)
+675 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+676 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage&#32;==&#32;<emphasis class="stringliteral">&quot;q&quot;</emphasis>)
+677 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+678 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;uit&quot;</emphasis>;
+679 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+680 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+681 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+682 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;UIT&quot;</emphasis>;
+683 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+684 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+685 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//quit</emphasis>
+686 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DateTime&#32;endTime&#32;=&#32;DateTime.Now;
+687 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TimeSpan&#32;totalTime&#32;=&#32;DateTime.Parse(Convert.ToString(endTime)).Subtract(DateTime.Parse(Convert.ToString(connecTime)));
+688 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+689 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//DateTime&#32;ConvertTime&#32;=&#32;Convert.ToDateTime(totalTime);</emphasis>
+690 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//string&#32;DisplayTime&#32;=&#32;ConvertTime.ToString(&quot;hh:mm&quot;);</emphasis>
+691 
+692 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outputMessage&#32;=&#32;matchCaseOutputMessage&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Closing&#32;terminal&#32;session.&#32;&#32;Session&#32;duration:&#32;&quot;</emphasis>&#32;+&#32;totalTime&#32;+&#32;Environment.NewLine;
+693 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+694 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+695 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage.ToUpper()&#32;==&#32;<emphasis class="stringliteral">&quot;C&quot;</emphasis>)
+696 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+697 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage&#32;==&#32;<emphasis class="stringliteral">&quot;c&quot;</emphasis>)
+698 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+699 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;lear&#32;stats&quot;</emphasis>;
+700 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+701 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+702 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+703 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matchCaseOutputMessage&#32;=&#32;<emphasis class="stringliteral">&quot;LEAR&#32;STATS&quot;</emphasis>;
+704 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+705 
+706 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//clear&#32;counters&#32;and&#32;display&#32;message&#32;indicating&#32;same</emphasis>
+707 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;failoverCount&#32;=&#32;0;
+708 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recoveries&#32;=&#32;0;
+709 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fullOutages&#32;=&#32;0;
+710 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;daqUpdates&#32;=&#32;0;
+711 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;telnetConnections&#32;=&#32;0;
+712 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketReceive&#32;=&#32;0;
+713 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketTransmit&#32;=&#32;0;
+714 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetIP&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+715 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetTime&#32;=&#32;<emphasis class="stringliteral">&quot;&quot;</emphasis>;
+716 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outputMessage&#32;=&#32;matchCaseOutputMessage&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Stats&#32;cleared&quot;</emphasis>&#32;+&#32;Environment.NewLine&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;?-&gt;&#32;&quot;</emphasis>;
+717 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+718 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+719 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+720 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;outputMessage&#32;=&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;Valid&#32;commands:&#32;&#32;U&#32;(Update),&#32;S&#32;(Status),&#32;T&#32;(Time),&#32;C&#32;(Clear&#32;Stats),&#32;Q&#32;(Quit)&quot;</emphasis>&#32;+&#32;Environment.NewLine&#32;+&#32;Environment.NewLine&#32;+&#32;<emphasis class="stringliteral">&quot;?-&gt;&#32;&quot;</emphasis>;
+721 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+722 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+723 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+724 
+725 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//ASCIIEncoding&#32;Outencoder&#32;=&#32;new&#32;ASCIIEncoding();</emphasis>
+726 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;byte[]&#32;buffer&#32;=&#32;encoder.GetBytes(outputMessage);
+727 
+728 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clientStream.Write(buffer,&#32;0,&#32;buffer.Length);
+729 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clientStream.Flush();
+730 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;totalSocketTransmit&#32;+=&#32;1;
+731 
+732 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(incomingMessage.ToUpper()&#32;==&#32;<emphasis class="stringliteral">&quot;Q&quot;</emphasis>)
+733 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+734 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLog4.WriteEntry(<emphasis class="stringliteral">&quot;Telnet&#32;client&#32;&quot;</emphasis>&#32;+&#32;remoteClientIP&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;has&#32;disconnected&quot;</emphasis>);
+735 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetTime&#32;=&#32;Convert.ToString(connecTime);
+736 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastTelnetIP&#32;=&#32;remoteClientIP;
+737 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">break</emphasis>;
+738 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+739 
+740 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+741 
+742 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tcpClient.Close();
+743 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+744 
+<link linkend="class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_1aa6270dd14da058bd30ffc1d8fcf97460">745 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_1aa6270dd14da058bd30ffc1d8fcf97460">FailoverRecovery</link>()
+746 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+747 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog&#32;EventLogf&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog();
+748 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="namespace_system">System</link>.Diagnostics.EventLog.SourceExists(<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>))
+749 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+750 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog.CreateEventSource(
+751 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>);
+752 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+753 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.Source&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+754 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.Log&#32;=&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>;
+755 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+756 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Recovery&#32;from&#32;a&#32;failover&#32;state.&#32;&#32;We&#32;are&#32;called&#32;anytime&#32;we&#32;recover&#32;connectivity&#32;to&#32;the&#32;primary&#32;connection&#32;after&#32;a&#32;failover&#32;has</emphasis>
+757 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//occurred.&#32;&#32;We&#32;are&#32;also&#32;called&#32;when&#32;the&#32;service&#32;first&#32;starts&#32;up,&#32;to&#32;see&#32;if&#32;there&#32;are&#32;any&#32;records&#32;sitting&#32;on&#32;the&#32;failover&#32;server</emphasis>
+758 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//that&#32;still&#32;need&#32;to&#32;be&#32;copied.&#32;&#32;This&#32;step&#32;is&#32;necessary&#32;in&#32;case&#32;something&#32;happens&#32;to&#32;either&#32;this&#32;service&#32;or&#32;this&#32;machine&#32;while</emphasis>
+759 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//a&#32;recovery&#32;is&#32;underway.&#32;&#32;Our&#32;call&#32;at&#32;startup&#32;occurs&#32;IF&#32;we&#32;have&#32;established&#32;our&#32;initial&#32;primary&#32;connection.</emphasis>
+760 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//</emphasis>
+761 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//First&#32;step&#32;is&#32;to&#32;check&#32;counts&#32;on&#32;the&#32;test&#32;tables&#32;on&#32;the&#32;failover&#32;server&#32;to&#32;see&#32;if&#32;they&#32;are&#32;&gt;&#32;0.&#32;&#32;If&#32;they&#32;are&#32;=&#32;0,&#32;there&#32;is</emphasis>
+762 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//nothing&#32;to&#32;do.&#32;&#32;Otherwise,&#32;we&#32;need&#32;to&#32;do&#32;the&#32;following:</emphasis>
+763 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//1.&#32;&#32;Check&#32;for&#32;existence&#32;of&#32;the&#32;record&#32;on&#32;the&#32;primary&#32;server&#32;and&#32;copy&#32;record&#32;ONLY&#32;if&#32;it&#32;isn&apos;t&#32;on&#32;the&#32;primary</emphasis>
+764 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//2.&#32;&#32;Remove&#32;the&#32;record&#32;from&#32;failover&#32;host.</emphasis>
+765 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//3.&#32;&#32;Repeat&#32;the&#32;above&#32;for&#32;each&#32;subsequent&#32;record.</emphasis>
+766 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//4.&#32;&#32;Return&#32;to&#32;the&#32;caller.</emphasis>
+767 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//</emphasis>
+768 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Reverse&#32;our&#32;redirection&#32;(copy&#32;hosts_HOSTBACK&#32;back&#32;to&#32;hosts):</emphasis>
+769 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+770 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;WindowsHostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts&quot;</emphasis>;
+771 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;hostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts_HOSTBACK&quot;</emphasis>;
+772 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;recordCountHC&#32;=&#32;0;
+773 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;recordCountTT&#32;=&#32;0;
+774 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">int</emphasis>&#32;recordCountPT&#32;=&#32;0;
+775 
+776 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!File.Exists(hostFile))
+777 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+778 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">return</emphasis>;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//No&#32;failover&#32;state&#32;exists,&#32;nothing&#32;to&#32;recover&#32;from,&#32;return&#32;to&#32;caller</emphasis>
+779 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+780 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+781 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;File.Copy(hostFile,&#32;WindowsHostFile,&#32;<emphasis class="keyword">true</emphasis>);
+782 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Now&#32;delete&#32;the&#32;backup&#32;file:</emphasis>
+783 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;File.Delete(hostFile);
+784 
+785 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Failover&#32;Redirection&#32;Reversed&quot;</emphasis>);
+786 
+787 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Now&#32;check&#32;the&#32;failover&#32;server&#32;for&#32;record&#32;counts:</emphasis>
+788 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;conString&#32;=&#32;<emphasis class="stringliteral">&quot;Initial&#32;Catalog&#32;=&#32;DAQ;Data&#32;Source&#32;=&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;;Integrated&#32;Security&#32;=&#32;False;User&#32;ID&#32;=&#32;daquser;Password&#32;=&#32;daq&quot;</emphasis>;
+789 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;conStringPrimary&#32;=&#32;<emphasis class="stringliteral">&quot;Initial&#32;Catalog&#32;=&#32;DAQ;Data&#32;Source&#32;=&#32;&quot;</emphasis>&#32;+&#32;primaryHost&#32;+&#32;<emphasis class="stringliteral">&quot;;Integrated&#32;Security&#32;=&#32;False;User&#32;ID&#32;=&#32;daquser;Password&#32;=&#32;daq&quot;</emphasis>;
+790 
+791 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;About&#32;to&#32;attempt&#32;connection&#32;with&#32;connection&#32;string:&#32;&quot;</emphasis>&#32;+&#32;conString);
+792 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+793 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Create&#32;a&#32;connection&#32;object&#32;to&#32;the&#32;failover&#32;host&#32;we&#32;will&#32;be&#32;copying&#32;FROM:</emphasis>
+794 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlConnection&#32;cnRecovery&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlConnection(conString);
+795 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cnRecovery.Open();
+796 
+797 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Create&#32;a&#32;connection&#32;object&#32;to&#32;the&#32;recovered&#32;primary&#32;host&#32;will&#32;be&#32;copying&#32;TO:</emphasis>
+798 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlConnection&#32;cnPrimary&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlConnection(conString);
+799 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cnPrimary.Open();
+800 
+801 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Primary&#32;recovery&#32;connection&#32;open&quot;</emphasis>);
+802 
+803 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;command&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Select&#32;Count(testnumber)&#32;As&#32;cnt&#32;From&#32;HeadCapTest&quot;</emphasis>,&#32;cnRecovery);
+804 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlDataReader&#32;reader&#32;=&#32;command.ExecuteReader();
+805 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;reader.Read();
+806 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Records&#32;in&#32;HeadCapTest:&#32;&quot;</emphasis>&#32;+&#32;reader[<emphasis class="stringliteral">&quot;cnt&quot;</emphasis>]);
+807 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recordCountHC&#32;=&#32;Convert.ToInt16(reader[<emphasis class="stringliteral">&quot;cnt&quot;</emphasis>]);
+808 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;reader.Close();
+809 
+810 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;command2&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Select&#32;Count(testnumber)&#32;As&#32;cnt&#32;From&#32;PrimingTest&quot;</emphasis>,&#32;cnRecovery);
+811 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlDataReader&#32;reader2&#32;=&#32;command2.ExecuteReader();
+812 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;reader2.Read();
+813 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Records&#32;in&#32;PrimingTest:&#32;&quot;</emphasis>&#32;+&#32;reader2[<emphasis class="stringliteral">&quot;cnt&quot;</emphasis>]);
+814 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recordCountPT&#32;=&#32;Convert.ToInt16(reader2[<emphasis class="stringliteral">&quot;cnt&quot;</emphasis>]);
+815 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;reader2.Close();
+816 
+817 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;command3&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Select&#32;Count(testnumber)&#32;As&#32;cnt&#32;From&#32;TemperatureTest&quot;</emphasis>,&#32;cnRecovery);
+818 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlDataReader&#32;reader3&#32;=&#32;command3.ExecuteReader();
+819 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;reader3.Read();
+820 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Records&#32;in&#32;TemperatureTest:&#32;&quot;</emphasis>&#32;+&#32;reader3[<emphasis class="stringliteral">&quot;cnt&quot;</emphasis>]);
+821 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recordCountTT&#32;=&#32;Convert.ToInt16(reader3[<emphasis class="stringliteral">&quot;cnt&quot;</emphasis>]);
+822 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;reader3.Close();
+823 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+824 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//If&#32;we&#32;have&#32;record&#32;counts&#32;higher&#32;than&#32;0,&#32;we&#32;have&#32;records&#32;that&#32;need&#32;to&#32;be&#32;copied&#32;from&#32;the&#32;failover&#32;host&#32;to&#32;GRCBI.&#32;Begin&#32;with&#32;HeadCapTest</emphasis>
+825 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//***&#32;The&#32;copy&#32;commands&#32;can&#32;be&#32;tested&#32;by&#32;replacing&#32;primaryhost&#32;with&#32;testprimary&#32;host&#32;below.</emphasis>
+826 
+827 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Process&#32;HeadCapTest&#32;records</emphasis>
+828 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(recordCountHC&#32;&gt;&#32;0)
+829 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+830 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Copying&#32;&quot;</emphasis>&#32;+&#32;recordCountHC&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;HEADCAPTEST&#32;records&#32;from&#32;failover&#32;host&#32;to&#32;primary&#32;host&quot;</emphasis>);
+831 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;commandHC&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Insert&#32;into&#32;&quot;</emphasis>&#32;+&#32;primaryHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.headcaptest&#32;(Pressure,&#32;Vacuum,&#32;GageCorr,&#32;VH,&#32;TDH,&#32;Flow,&#32;RPM,&#32;PowerFactor,&#32;Torque,&#32;TestNumber,&#32;Timestamp,&#32;TestStand,&#32;L1_L2_Volts,&#32;L2_L3_Volts,&#32;L3_L1_Volts,&#32;AverageL_L_Volts,&#32;L1_Current,&#32;L2_Current,&#32;L3_Current,&#32;AverageCurrent,&#32;L1_KW,&#32;L2_KW,&#32;L3_KW,&#32;TotalKW,&#32;L1_PF,&#32;L2_PF,&#32;L3_PF,&#32;TruePF,&#32;Temp1,&#32;Temp2,&#32;Temp3,&#32;Temp4,&#32;Temp5,&#32;Temp6,&#32;Pressure1,&#32;Pressure2,&#32;Pressure3,&#32;HP,&#32;Efficiency,&#32;Barometer,&#32;Sound,&#32;NPSHR,&#32;Comment)&#32;Select&#32;Pressure,&#32;Vacuum,&#32;GageCorr,&#32;VH,&#32;TDH,&#32;Flow,&#32;RPM,&#32;PowerFactor,&#32;Torque,&#32;TestNumber,&#32;Timestamp,&#32;TestStand,&#32;L1_L2_Volts,&#32;L2_L3_Volts,&#32;L3_L1_Volts,&#32;AverageL_L_Volts,&#32;L1_Current,&#32;L2_Current,&#32;L3_Current,&#32;AverageCurrent,&#32;L1_KW,&#32;L2_KW,&#32;L3_KW,&#32;TotalKW,&#32;L1_PF,&#32;L2_PF,&#32;L3_PF,&#32;TruePF,&#32;Temp1,&#32;Temp2,&#32;Temp3,&#32;Temp4,&#32;Temp5,&#32;Temp6,&#32;Pressure1,&#32;Pressure2,&#32;Pressure3,&#32;HP,&#32;Efficiency,&#32;Barometer,&#32;Sound,&#32;NPSHR,&#32;Comment&#32;from&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.headcaptest&quot;</emphasis>,&#32;cnPrimary);
+832 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandHC.ExecuteNonQuery();
+833 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandHC.Dispose();
+834 
+835 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Removing&#32;HEADCAPTEST&#32;records&#32;from&#32;failover&#32;host&quot;</emphasis>);
+836 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;commandHCD&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Delete&#32;from&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.headcaptest&quot;</emphasis>,&#32;cnPrimary);
+837 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandHCD.ExecuteNonQuery();
+838 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandHCD.Dispose();
+839 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+840 
+841 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Process&#32;PrimingTest&#32;records</emphasis>
+842 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(recordCountPT&#32;&gt;&#32;0)
+843 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+844 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Copying&#32;&quot;</emphasis>&#32;+&#32;recordCountPT&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;PRIMINGTEST&#32;records&#32;from&#32;failover&#32;host&#32;to&#32;primary&#32;host&quot;</emphasis>);
+845 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;commandPT&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Insert&#32;into&#32;&quot;</emphasis>&#32;+&#32;primaryHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.primingtest&#32;(TestNumber,&#32;PrimeLevel1,&#32;PrimeTime1,&#32;PrimeLevel2,&#32;PrimeTime2,&#32;PrimeLevel3,&#32;PrimeTime3,&#32;PrimeLevel4,&#32;PrimeTime4,&#32;PrimeLevel5,&#32;PrimeTime5,&#32;PrimeLevel6,&#32;PrimeTime6,&#32;PrimeLevel7,&#32;PrimeTime7,&#32;PrimeLevel8,&#32;PrimeTime8,&#32;PrimeLevel9,&#32;PrimeTime9,&#32;PrimeLevel10,&#32;PrimeTime10,&#32;PrimeLevel11,&#32;PrimeTime11,&#32;PrimeLevel12,&#32;PrimeTime12,&#32;PrimeLevel13,&#32;PrimeTime13,&#32;PrimeLevel14,&#32;Primetime14,&#32;PrimeLevel15,&#32;PrimeTime15,&#32;PrimeLevel16,&#32;PrimeTime16,&#32;Timestamp,&#32;TestStand,&#32;LiquidLevelCasing,&#32;MaxLift,&#32;MaxVacuum,&#32;StaticLift,&#32;RPM,&#32;FlowAtDelivery,&#32;DeliveryTime)&#32;Select&#32;TestNumber,&#32;PrimeLevel1,&#32;PrimeTime1,&#32;PrimeLevel2,&#32;PrimeTime2,&#32;PrimeLevel3,&#32;PrimeTime3,&#32;PrimeLevel4,&#32;PrimeTime4,&#32;PrimeLevel5,&#32;PrimeTime5,&#32;PrimeLevel6,&#32;PrimeTime6,&#32;PrimeLevel7,&#32;PrimeTime7,&#32;PrimeLevel8,&#32;PrimeTime8,&#32;PrimeLevel9,&#32;PrimeTime9,&#32;PrimeLevel10,&#32;PrimeTime10,&#32;PrimeLevel11,&#32;PrimeTime11,&#32;PrimeLevel12,&#32;PrimeTime12,&#32;PrimeLevel13,&#32;PrimeTime13,&#32;PrimeLevel14,&#32;Primetime14,&#32;PrimeLevel15,&#32;PrimeTime15,&#32;PrimeLevel16,&#32;PrimeTime16,&#32;Timestamp,&#32;TestStand,&#32;LiquidLevelCasing,&#32;MaxLift,&#32;MaxVacuum,&#32;StaticLift,&#32;RPM,&#32;FlowAtDelivery,&#32;DeliveryTime&#32;from&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.primingtest&quot;</emphasis>,&#32;cnPrimary);
+846 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandPT.ExecuteNonQuery();
+847 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandPT.Dispose();
+848 
+849 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Removing&#32;PRIMINGTEST&#32;records&#32;from&#32;failover&#32;host&quot;</emphasis>);
+850 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;commandPTD&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Delete&#32;from&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.primingtest&quot;</emphasis>,&#32;cnPrimary);
+851 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandPTD.ExecuteNonQuery();
+852 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandPTD.Dispose();
+853 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+854 
+855 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Process&#32;TemperatureTest&#32;records</emphasis>
+856 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(recordCountTT&#32;&gt;&#32;0)
+857 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+858 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Copying&#32;&quot;</emphasis>&#32;+&#32;recordCountTT&#32;+&#32;<emphasis class="stringliteral">&quot;&#32;TEMPERATURETEST&#32;records&#32;from&#32;failover&#32;host&#32;to&#32;primary&#32;host&quot;</emphasis>);
+859 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;commandTT&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Insert&#32;into&#32;&quot;</emphasis>&#32;+&#32;primaryHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.TEMPERATUREtest&#32;(Temp1,&#32;Temp2,&#32;Temp3,&#32;Temp4,&#32;Temp5,&#32;Temp6,&#32;Temp7,&#32;Temp8,&#32;TestNumber,&#32;TimeStamp,&#32;TestStand)&#32;Select&#32;Temp1,&#32;Temp2,&#32;Temp3,&#32;Temp4,&#32;Temp5,&#32;Temp6,&#32;Temp7,&#32;Temp8,&#32;TestNumber,&#32;TimeStamp,&#32;TestStand&#32;from&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.temperaturetest&quot;</emphasis>,&#32;cnPrimary);
+860 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandTT.ExecuteNonQuery();
+861 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandTT.Dispose();
+862 
+863 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Removing&#32;TEMPERATURETEST&#32;records&#32;from&#32;failover&#32;host&quot;</emphasis>);
+864 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SqlCommand&#32;commandTTD&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;SqlCommand(<emphasis class="stringliteral">&quot;Delete&#32;from&#32;&quot;</emphasis>&#32;+&#32;failoverHost&#32;+&#32;<emphasis class="stringliteral">&quot;.daq.dbo.TEMPERATUREtest&quot;</emphasis>,&#32;cnPrimary);
+865 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandTTD.ExecuteNonQuery();
+866 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;commandTTD.Dispose();
+867 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+868 
+869 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogf.WriteEntry(<emphasis class="stringliteral">&quot;Recovery&#32;processing&#32;completed&quot;</emphasis>);&#32;
+870 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+871 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cnRecovery.Close();
+872 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cnPrimary.Close();
+873 
+874 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+875 
+<link linkend="class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_1af8284a66b3211ed8d6aabf12cef5f1d5">876 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_1af8284a66b3211ed8d6aabf12cef5f1d5">checkPrimary</link>()
+877 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+878 
+879 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+880 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+881 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IPHostEntry&#32;ipHost&#32;=&#32;Dns.Resolve(primaryHost);
+882 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;primaryGood&#32;=&#32;1;
+883 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+884 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>&#32;(SocketException&#32;se)
+885 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+886 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;primaryGood&#32;=&#32;0;
+887 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+888 
+889 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+890 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<link linkend="class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_1a629b4ddcdcacf076ce421cbc9bfb673a">891 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_1a629b4ddcdcacf076ce421cbc9bfb673a">trythis</link>()
+892 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+893 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Try&#32;connection&#32;to&#32;the&#32;failover&#32;host&#32;which&#32;will&#32;typically&#32;(for&#32;now)&#32;be&#32;localhost</emphasis>
+894 
+895 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TcpClient&#32;tcpClient&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;TcpClient();
+896 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">try</emphasis>
+897 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+898 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tcpClient.Connect(<emphasis class="stringliteral">&quot;127.0.0.1&quot;</emphasis>,&#32;3232);
+899 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goodFailoverConnect&#32;=&#32;1;
+900 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+901 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">catch</emphasis>&#32;(Exception)
+902 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+903 
+904 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;goodFailoverConnect&#32;=&#32;0;
+905 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+906 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+907 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_1a828d21dbbfe5af7c6948df027994b9f1">908 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_1a828d21dbbfe5af7c6948df027994b9f1">CheckHosts</link>()
+909 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+910 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//If&#32;hosts_HOSTBACK&#32;exists,&#32;rename&#32;it&#32;to&#32;hosts.&#32;&#32;If&#32;a&#32;failover&#32;state&#32;still&#32;exists,&#32;it&#32;will&#32;be&#32;changed&#32;back&#32;to&#32;the&#32;failover</emphasis>
+911 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//version&#32;by&#32;the&#32;service&#32;when&#32;that&#32;determination&#32;has&#32;been&#32;made.</emphasis>
+912 
+913 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;hostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts_HOSTBACK&quot;</emphasis>;
+914 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;originalhostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts&quot;</emphasis>;
+915 
+916 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(File.Exists(hostFile))
+917 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+918 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;File.Copy(hostFile,&#32;originalhostFile,&#32;<emphasis class="keyword">true</emphasis>);
+919 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;File.Delete(hostFile);
+920 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+921 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+922 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+923 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_1a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e">924 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_1a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e">engageFailoverRedirection</link>()
+925 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+926 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Set&#32;up&#32;redirection&#32;machine-wide&#32;by&#32;manipulating&#32;the&#32;hosts&#32;file&#32;so&#32;that&#32;any&#32;calls&#32;to&#32;the&#32;primary&#32;host&#32;will&#32;redirect&#32;to&#32;the&#32;failover&#32;host</emphasis>
+927 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+928 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog&#32;EventLogr&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog();
+929 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(!<link linkend="namespace_system">System</link>.Diagnostics.EventLog.SourceExists(<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>))
+930 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+931 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog.CreateEventSource(
+932 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>,&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>);
+933 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+934 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogr.Source&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+935 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogr.Log&#32;=&#32;<emphasis class="stringliteral">&quot;Application&quot;</emphasis>;
+936 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+937 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;WindowsHostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts&quot;</emphasis>;
+938 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;NCMHostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts_NCM&quot;</emphasis>;
+939 
+940 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;hostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts_HOSTBACK&quot;</emphasis>;
+941 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordtype">string</emphasis>&#32;originalhostFile&#32;=&#32;<link linkend="namespace_system">System</link>.Environment.SystemDirectory&#32;+&#32;<emphasis class="stringliteral">&quot;\\Drivers\\etc\\hosts&quot;</emphasis>;
+942 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+943 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(File.Exists(hostFile))
+944 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+945 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//the&#32;host&#32;file&#32;was&#32;already&#32;backed&#32;up;&#32;do&#32;nothing&#32;but&#32;simply&#32;continue</emphasis>
+946 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+947 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">else</emphasis>
+948 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+949 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//backup&#32;the&#32;host&#32;file:</emphasis>
+950 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;File.Move(WindowsHostFile,&#32;hostFile);
+951 
+952 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//Copy&#32;the&#32;NCM&#32;version&#32;of&#32;the&#32;host&#32;file&#32;to&#32;hosts,&#32;to&#32;achieve&#32;failover&#32;redirection:</emphasis>
+953 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;File.Copy(NCMHostFile,&#32;WindowsHostFile,&#32;<emphasis class="keyword">true</emphasis>);
+954 
+955 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventLogr.WriteEntry(<emphasis class="stringliteral">&quot;Failover&#32;Redirection&#32;Active&quot;</emphasis>);
+956 
+957 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+958 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+959 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+960 &#32;&#32;&#32;&#32;}
+961 }
+    </computeroutput></literallayout>
+</section>

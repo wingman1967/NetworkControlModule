@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_project_installer_8cs">
+    <title>ProjectInstaller.cs File Reference</title>
+<para>Include dependency diagram for ProjectInstaller.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_project_installer_8cs__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for ProjectInstaller.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_project_installer_8cs__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_network_control_module_1_1_project_installer">NetworkControlModule::ProjectInstaller</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_network_control_module">NetworkControlModule</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_collections">System::Collections</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_component_model">System::ComponentModel</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_configuration_1_1_install">System::Configuration::Install</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/hinesj/Documents/Visual Studio 2012/Projects/NetworkControlModule/NetworkControlModule/ProjectInstaller.cs</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>;
+2 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Collections;
+3 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Collections.Generic;
+4 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.ComponentModel;
+5 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Configuration.Install;
+6 <emphasis class="keyword">using</emphasis>&#32;<link linkend="namespace_system">System</link>.Linq;
+7 
+8 
+9 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="namespace_network_control_module">NetworkControlModule</link>
+10 {
+11 &#32;&#32;&#32;&#32;[RunInstaller(<emphasis class="keyword">true</emphasis>)]
+<link linkend="class_network_control_module_1_1_project_installer">12 </link>&#32;&#32;&#32;&#32;<emphasis class="keyword">public</emphasis>&#32;<emphasis class="keyword">partial&#32;class&#32;</emphasis><link linkend="class_network_control_module_1_1_project_installer">ProjectInstaller</link>&#32;:&#32;<link linkend="namespace_system">System</link>.Configuration.Install.Installer
+13 &#32;&#32;&#32;&#32;{
+<link linkend="class_network_control_module_1_1_project_installer_a88d1b45d81432d1d530cd3d738f2ff30_1a88d1b45d81432d1d530cd3d738f2ff30">14 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">public</emphasis>&#32;<link linkend="class_network_control_module_1_1_project_installer_a88d1b45d81432d1d530cd3d738f2ff30_1a88d1b45d81432d1d530cd3d738f2ff30">ProjectInstaller</link>()
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_project_installer_a205c795569f8488c48caca46daffd6a1_1a205c795569f8488c48caca46daffd6a1">InitializeComponent</link>();
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+18 &#32;&#32;&#32;&#32;}
+19 }
+    </computeroutput></literallayout>
+</section>

@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_network_control_module_1_1_n_c_m_service">
+<title>NetworkControlModule::NCMService class Reference</title>
+<para>Inheritance diagram for NetworkControlModule::NCMService</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="class_network_control_module_1_1_n_c_m_service__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for NetworkControlModule::NCMService</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="class_network_control_module_1_1_n_c_m_service__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool ssl</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int maxWaitMillisec</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int port</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool success</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Timers.Timer timer1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string host</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int noFinditerator</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string primaryHost</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string failoverHost</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string testprimaryHost</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int successful</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int failOverState</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int servicePort</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int socketConnectAttempts</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string savehost</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Thread socketListenerThread</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Thread TelnetListenerThread</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int NCMServicePort</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int TelnetPort</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int firstTimeIn</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int primaryGood</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int cycleRunning</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool TotalFailure</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool Processing</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components<para><emphasis>&lt;summary&gt; 
+Required designer variable.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int nuke</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string outMessage</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static TcpListener tcpPrimaryListener</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static Thread listenThread</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static DateTime uptimeStart</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static DateTime uptimeNow</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int failoverCount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int daqUpdates</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int telnetConnections</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int fullOutages</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int recoveries</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int totalSocketReceive</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int totalSocketTransmit</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string lastTelnetIP</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string lastTelnetTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static string currentState</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int RecoveryInProgress</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int goodFailoverConnect</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Diagnostics.EventLog eventLog1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_1a10d46303c9150010b37d05a86dd5b08f">NCMService</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_1ac3e1fb8571c4bf2f3ef682dc4942affb">OnStart</link> (
+string [] args)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_network_control_module_1_1_n_c_m_service_a0071afdb16b84b1a1c6044f4fadea106_1a0071afdb16b84b1a1c6044f4fadea106">OnStop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_network_control_module_1_1_n_c_m_service_a7151765de6b7e9c48e833348a94076ec_1a7151765de6b7e9c48e833348a94076ec">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_1a71698638b0eabc511b116427dca76023">checkConnection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_1af74640813b4eb6e484be7f8f5157c1f1">timer1_Elapsed</link> (
+object sender, EventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_1a2eb9b3d6a64f5d1f9b54beedf7776580">updateSocket</link> (
+string command, string host, int failOverIndicator)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_1aa6270dd14da058bd30ffc1d8fcf97460">FailoverRecovery</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_1af8284a66b3211ed8d6aabf12cef5f1d5">checkPrimary</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_1a629b4ddcdcacf076ce421cbc9bfb673a">trythis</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_1a828d21dbbfe5af7c6948df027994b9f1">CheckHosts</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_1a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e">engageFailoverRedirection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_1a48c06f4755b8f175f8ec2ff75ae44086">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt; 
+Required method for Designer support - do not modify 
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_1ae3faaa41bb6fea247b7604446adcce36">incomingSocket</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_1ac6f190aaf7a1736cb8573971d8276b71">telnetServer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_1abe41fa817c46899d8af2574f1ea5be45">ListenForClients</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_1a9b15b44864b5712dd7837bcaf0106ede">HandleClientComm</link> (
+object client)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>System.ComponentModel.IContainer NetworkControlModule.NCMService.components</title>                
+                <para>Definition at line 8 of file Service1.Designer.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Service1.Designer.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_1a10d46303c9150010b37d05a86dd5b08f">
+                <title>NetworkControlModule.NCMService.NCMService ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_1ac3e1fb8571c4bf2f3ef682dc4942affb">
+                <title>override void NetworkControlModule.NCMService.OnStart (string[] args)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a0071afdb16b84b1a1c6044f4fadea106_1a0071afdb16b84b1a1c6044f4fadea106">
+                <title>override void NetworkControlModule.NCMService.OnStop ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a7151765de6b7e9c48e833348a94076ec_1a7151765de6b7e9c48e833348a94076ec">
+                <title>override void NetworkControlModule.NCMService.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>disposing</entry>
+                                <entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_1a71698638b0eabc511b116427dca76023">
+                <title>void NetworkControlModule.NCMService.checkConnection ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_1af74640813b4eb6e484be7f8f5157c1f1">
+                <title>void NetworkControlModule.NCMService.timer1_Elapsed (object sender, EventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_1a2eb9b3d6a64f5d1f9b54beedf7776580">
+                <title>void NetworkControlModule.NCMService.updateSocket (string command, string host, int failOverIndicator)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_1aa6270dd14da058bd30ffc1d8fcf97460">
+                <title>void NetworkControlModule.NCMService.FailoverRecovery ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_1af8284a66b3211ed8d6aabf12cef5f1d5">
+                <title>void NetworkControlModule.NCMService.checkPrimary ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_1a629b4ddcdcacf076ce421cbc9bfb673a">
+                <title>void NetworkControlModule.NCMService.trythis ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_1a828d21dbbfe5af7c6948df027994b9f1">
+                <title>void NetworkControlModule.NCMService.CheckHosts ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_1a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e">
+                <title>void NetworkControlModule.NCMService.engageFailoverRedirection ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_1a48c06f4755b8f175f8ec2ff75ae44086">
+                <title>void NetworkControlModule.NCMService.InitializeComponent ()</title> <emphasis>&lt;summary&gt; 
+Required method for Designer support - do not modify 
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_1ae3faaa41bb6fea247b7604446adcce36">
+                <title>static void NetworkControlModule.NCMService.incomingSocket ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_1ac6f190aaf7a1736cb8573971d8276b71">
+                <title>static void NetworkControlModule.NCMService.telnetServer ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_1abe41fa817c46899d8af2574f1ea5be45">
+                <title>static void NetworkControlModule.NCMService.ListenForClients ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_1a9b15b44864b5712dd7837bcaf0106ede">
+                <title>static void NetworkControlModule.NCMService.HandleClientComm (object client)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

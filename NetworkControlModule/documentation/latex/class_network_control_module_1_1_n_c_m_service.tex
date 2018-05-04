@@ -1,0 +1,958 @@
+\hypertarget{class_network_control_module_1_1_n_c_m_service}{}\section{Network\+Control\+Module.\+N\+C\+M\+Service Class Reference}
+\label{class_network_control_module_1_1_n_c_m_service}\index{Network\+Control\+Module.\+N\+C\+M\+Service@{Network\+Control\+Module.\+N\+C\+M\+Service}}
+
+
+Inheritance diagram for Network\+Control\+Module.\+N\+C\+M\+Service\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_network_control_module_1_1_n_c_m_service__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Network\+Control\+Module.\+N\+C\+M\+Service\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_network_control_module_1_1_n_c_m_service__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_a10d46303c9150010b37d05a86dd5b08f}{N\+C\+M\+Service} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+System.\+Diagnostics.\+Event\+Log \hyperlink{class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_a15da8461fc5889992cdd8429bb0a19f4}{event\+Log1}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_ac3e1fb8571c4bf2f3ef682dc4942affb}{On\+Start} (string\mbox{[}$\,$\mbox{]} args)
+\item 
+override void \hyperlink{class_network_control_module_1_1_n_c_m_service_a0071afdb16b84b1a1c6044f4fadea106_a0071afdb16b84b1a1c6044f4fadea106}{On\+Stop} ()
+\item 
+override void \hyperlink{class_network_control_module_1_1_n_c_m_service_a7151765de6b7e9c48e833348a94076ec_a7151765de6b7e9c48e833348a94076ec}{Dispose} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_a71698638b0eabc511b116427dca76023}{check\+Connection} ()
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_af74640813b4eb6e484be7f8f5157c1f1}{timer1\+\_\+\+Elapsed} (object sender, Event\+Args e)
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_a2eb9b3d6a64f5d1f9b54beedf7776580}{update\+Socket} (string command, string \hyperlink{class_network_control_module_1_1_n_c_m_service_afb36f8bbf843e7e513681b46f70384a0_afb36f8bbf843e7e513681b46f70384a0}{host}, int fail\+Over\+Indicator)
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_aa6270dd14da058bd30ffc1d8fcf97460}{Failover\+Recovery} ()
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_af8284a66b3211ed8d6aabf12cef5f1d5}{check\+Primary} ()
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_a629b4ddcdcacf076ce421cbc9bfb673a}{trythis} ()
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_a828d21dbbfe5af7c6948df027994b9f1}{Check\+Hosts} ()
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e}{engage\+Failover\+Redirection} ()
+\item 
+void \hyperlink{class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_a48c06f4755b8f175f8ec2ff75ae44086}{Initialize\+Component} ()
+\begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_ae3faaa41bb6fea247b7604446adcce36}{incoming\+Socket} ()
+\item 
+static void \hyperlink{class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_ac6f190aaf7a1736cb8573971d8276b71}{telnet\+Server} ()
+\item 
+static void \hyperlink{class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_abe41fa817c46899d8af2574f1ea5be45}{Listen\+For\+Clients} ()
+\item 
+static void \hyperlink{class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_a9b15b44864b5712dd7837bcaf0106ede}{Handle\+Client\+Comm} (object client)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_network_control_module_1_1_n_c_m_service_a7050951d87836dba8d38530b29e04c2c_a7050951d87836dba8d38530b29e04c2c}{ssl} = false
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_aca8900ea24fd0a5fc96ad29cda998f41_aca8900ea24fd0a5fc96ad29cda998f41}{max\+Wait\+Millisec} = 20000
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_aa0ec0c03f5a1e63c2dc900d8994e3543_aa0ec0c03f5a1e63c2dc900d8994e3543}{port} = 1433
+\item 
+bool \hyperlink{class_network_control_module_1_1_n_c_m_service_a822c3f8f6f983fd2a445eaf2ce179042_a822c3f8f6f983fd2a445eaf2ce179042}{success}
+\item 
+System.\+Timers.\+Timer \hyperlink{class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_ab6c3ae6d10ff37f13707e7606d411d4c}{timer1} = new System.\+Timers.\+Timer()
+\item 
+string \hyperlink{class_network_control_module_1_1_n_c_m_service_afb36f8bbf843e7e513681b46f70384a0_afb36f8bbf843e7e513681b46f70384a0}{host}
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_af2d65f81e2843c3a6a83810d0bc6627d_af2d65f81e2843c3a6a83810d0bc6627d}{no\+Finditerator}
+\item 
+string \hyperlink{class_network_control_module_1_1_n_c_m_service_af70bdd7ffaa8c8327996fd4fa7904b77_af70bdd7ffaa8c8327996fd4fa7904b77}{primary\+Host} = \char`\"{}grcbi\char`\"{}
+\item 
+string \hyperlink{class_network_control_module_1_1_n_c_m_service_a4549f05328c75ba8096aac96cd0978ce_a4549f05328c75ba8096aac96cd0978ce}{failover\+Host} = \char`\"{}localhost\char`\"{}
+\item 
+string \hyperlink{class_network_control_module_1_1_n_c_m_service_a88e9a864ebb4743a210645bd679e318d_a88e9a864ebb4743a210645bd679e318d}{testprimary\+Host} = \char`\"{}grcbi\char`\"{}
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_a51450ea83ed66fd2d8e8a0bde66d3fb2_a51450ea83ed66fd2d8e8a0bde66d3fb2}{successful}
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_a823af9c186f8b7e5045c27b7e227de26_a823af9c186f8b7e5045c27b7e227de26}{fail\+Over\+State} = 1
+\item 
+const int \hyperlink{class_network_control_module_1_1_n_c_m_service_aba0aeb4a585fcc724110d66a1f27c0d7_aba0aeb4a585fcc724110d66a1f27c0d7}{service\+Port} = 3232
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_a90c351d01d1f493fb7023356554b55b0_a90c351d01d1f493fb7023356554b55b0}{socket\+Connect\+Attempts}
+\item 
+string \hyperlink{class_network_control_module_1_1_n_c_m_service_a6da1f49b1704195520c2893fc0de3b89_a6da1f49b1704195520c2893fc0de3b89}{savehost} = \char`\"{}\char`\"{}
+\item 
+Thread \hyperlink{class_network_control_module_1_1_n_c_m_service_af75b07219173586520a505c3f722bed0_af75b07219173586520a505c3f722bed0}{socket\+Listener\+Thread} = new System.\+Threading.\+Thread(new Thread\+Start(\hyperlink{class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_ae3faaa41bb6fea247b7604446adcce36}{incoming\+Socket}))
+\item 
+Thread \hyperlink{class_network_control_module_1_1_n_c_m_service_a563d2cddc2542a5c1e5734060a62d527_a563d2cddc2542a5c1e5734060a62d527}{Telnet\+Listener\+Thread} = new System.\+Threading.\+Thread(new Thread\+Start(\hyperlink{class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_ac6f190aaf7a1736cb8573971d8276b71}{telnet\+Server}))
+\item 
+const int \hyperlink{class_network_control_module_1_1_n_c_m_service_a4b819f80512a24240d2f116dbd2e07c2_a4b819f80512a24240d2f116dbd2e07c2}{N\+C\+M\+Service\+Port} = 3230
+\item 
+const int \hyperlink{class_network_control_module_1_1_n_c_m_service_afe66ea01cc1afa2471e6878af261f66f_afe66ea01cc1afa2471e6878af261f66f}{Telnet\+Port} = 3231
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_a2f5f8b787ecaac67a859a5a0b059c76c_a2f5f8b787ecaac67a859a5a0b059c76c}{first\+Time\+In} = 1
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_a17d56b15343f7ef3f57dd0bb7e0e7248_a17d56b15343f7ef3f57dd0bb7e0e7248}{primary\+Good}
+\item 
+int \hyperlink{class_network_control_module_1_1_n_c_m_service_a00b9404eb670cc8753d62d9aa6de78a2_a00b9404eb670cc8753d62d9aa6de78a2}{cycle\+Running} = 0
+\item 
+bool \hyperlink{class_network_control_module_1_1_n_c_m_service_a4aa4a66f2e53d0fd3327c92cc2c2c6b8_a4aa4a66f2e53d0fd3327c92cc2c2c6b8}{Total\+Failure} = false
+\item 
+bool \hyperlink{class_network_control_module_1_1_n_c_m_service_a1f12d6b4206a3faaf85ea2c9612302dd_a1f12d6b4206a3faaf85ea2c9612302dd}{Processing} = false
+\item 
+System.\+Component\+Model.\+I\+Container \hyperlink{class_network_control_module_1_1_n_c_m_service_ae6f96d50f2b61113c6145d7e26aa5fc5_ae6f96d50f2b61113c6145d7e26aa5fc5}{components} = null
+\begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_a6617c8dea13c53f9d4c2cec604a0370f_a6617c8dea13c53f9d4c2cec604a0370f}{nuke} = 0
+\item 
+static string \hyperlink{class_network_control_module_1_1_n_c_m_service_acc23e0721fe2a56b83c20aca3cbb732a_acc23e0721fe2a56b83c20aca3cbb732a}{out\+Message}
+\item 
+static Tcp\+Listener \hyperlink{class_network_control_module_1_1_n_c_m_service_a7cd20c3e61895e554580c1c108c70ad0_a7cd20c3e61895e554580c1c108c70ad0}{tcp\+Primary\+Listener}
+\item 
+static Thread \hyperlink{class_network_control_module_1_1_n_c_m_service_aa537ca2966e1fed6b18325fd5857060c_aa537ca2966e1fed6b18325fd5857060c}{listen\+Thread}
+\item 
+static Date\+Time \hyperlink{class_network_control_module_1_1_n_c_m_service_a198846e0856da7ab59c64b64deed1724_a198846e0856da7ab59c64b64deed1724}{uptime\+Start}
+\item 
+static Date\+Time \hyperlink{class_network_control_module_1_1_n_c_m_service_a682ce1c27f753ecb0642a81bd7f59946_a682ce1c27f753ecb0642a81bd7f59946}{uptime\+Now}
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_acd64ecc3594103d59ec4b3507dd7d5f2_acd64ecc3594103d59ec4b3507dd7d5f2}{failover\+Count} = 0
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_a52171126067f812651e8ec600b955a4f_a52171126067f812651e8ec600b955a4f}{daq\+Updates} = 0
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_a2366654711a67324ed7f06bee5212552_a2366654711a67324ed7f06bee5212552}{telnet\+Connections} = 0
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_a8f9883195ab748484398e3e9ccce736a_a8f9883195ab748484398e3e9ccce736a}{full\+Outages} = 0
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_af6324ad1445566880df2051940007f36_af6324ad1445566880df2051940007f36}{recoveries} = 0
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_a6e0fb6e7b9a63786ec21a7a5e2451282_a6e0fb6e7b9a63786ec21a7a5e2451282}{total\+Socket\+Receive} = 0
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_ab1b68ac1880d7f67ffe80bec463558e8_ab1b68ac1880d7f67ffe80bec463558e8}{total\+Socket\+Transmit} = 0
+\item 
+static string \hyperlink{class_network_control_module_1_1_n_c_m_service_a65abf86625998d7123c57a354adfc927_a65abf86625998d7123c57a354adfc927}{last\+Telnet\+IP}
+\item 
+static string \hyperlink{class_network_control_module_1_1_n_c_m_service_ad69f9823fdacc5b871a51641153fe4b4_ad69f9823fdacc5b871a51641153fe4b4}{last\+Telnet\+Time}
+\item 
+static string \hyperlink{class_network_control_module_1_1_n_c_m_service_ace92c48ec4175ca640d89283532f4187_ace92c48ec4175ca640d89283532f4187}{current\+State}
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_a6c1df739cb198464f9ad3276e2a08db7_a6c1df739cb198464f9ad3276e2a08db7}{Recovery\+In\+Progress} = 0
+\item 
+static int \hyperlink{class_network_control_module_1_1_n_c_m_service_aa6ce1bb5b8cbce3a3162c84944d9a623_aa6ce1bb5b8cbce3a3162c84944d9a623}{good\+Failover\+Connect} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 20 of file Service1.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_a10d46303c9150010b37d05a86dd5b08f}\label{class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_a10d46303c9150010b37d05a86dd5b08f}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!N\+C\+M\+Service@{N\+C\+M\+Service}}
+\index{N\+C\+M\+Service@{N\+C\+M\+Service}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{N\+C\+M\+Service()}{NCMService()}}
+{\footnotesize\ttfamily Network\+Control\+Module.\+N\+C\+M\+Service.\+N\+C\+M\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file Service1.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a10d46303c9150010b37d05a86dd5b08f_a10d46303c9150010b37d05a86dd5b08f_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_a71698638b0eabc511b116427dca76023}\label{class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_a71698638b0eabc511b116427dca76023}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!check\+Connection@{check\+Connection}}
+\index{check\+Connection@{check\+Connection}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{check\+Connection()}{checkConnection()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+check\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 131 of file Service1.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_a71698638b0eabc511b116427dca76023_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a71698638b0eabc511b116427dca76023_a71698638b0eabc511b116427dca76023_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_a828d21dbbfe5af7c6948df027994b9f1}\label{class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_a828d21dbbfe5af7c6948df027994b9f1}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Check\+Hosts@{Check\+Hosts}}
+\index{Check\+Hosts@{Check\+Hosts}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Check\+Hosts()}{CheckHosts()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+Check\+Hosts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 908 of file Service1.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a828d21dbbfe5af7c6948df027994b9f1_a828d21dbbfe5af7c6948df027994b9f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_af8284a66b3211ed8d6aabf12cef5f1d5}\label{class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_af8284a66b3211ed8d6aabf12cef5f1d5}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!check\+Primary@{check\+Primary}}
+\index{check\+Primary@{check\+Primary}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{check\+Primary()}{checkPrimary()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+check\+Primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 876 of file Service1.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_af8284a66b3211ed8d6aabf12cef5f1d5_af8284a66b3211ed8d6aabf12cef5f1d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a7151765de6b7e9c48e833348a94076ec_a7151765de6b7e9c48e833348a94076ec}\label{class_network_control_module_1_1_n_c_m_service_a7151765de6b7e9c48e833348a94076ec_a7151765de6b7e9c48e833348a94076ec}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void Network\+Control\+Module.\+N\+C\+M\+Service.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file Service1.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e}\label{class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!engage\+Failover\+Redirection@{engage\+Failover\+Redirection}}
+\index{engage\+Failover\+Redirection@{engage\+Failover\+Redirection}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{engage\+Failover\+Redirection()}{engageFailoverRedirection()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+engage\+Failover\+Redirection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 924 of file Service1.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_a6905fc3a5c3d1e9b0cfa1b9e5aa4c24e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_aa6270dd14da058bd30ffc1d8fcf97460}\label{class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_aa6270dd14da058bd30ffc1d8fcf97460}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Failover\+Recovery@{Failover\+Recovery}}
+\index{Failover\+Recovery@{Failover\+Recovery}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Failover\+Recovery()}{FailoverRecovery()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+Failover\+Recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 745 of file Service1.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_aa6270dd14da058bd30ffc1d8fcf97460_aa6270dd14da058bd30ffc1d8fcf97460_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_a9b15b44864b5712dd7837bcaf0106ede}\label{class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_a9b15b44864b5712dd7837bcaf0106ede}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Handle\+Client\+Comm@{Handle\+Client\+Comm}}
+\index{Handle\+Client\+Comm@{Handle\+Client\+Comm}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Handle\+Client\+Comm()}{HandleClientComm()}}
+{\footnotesize\ttfamily static void Network\+Control\+Module.\+N\+C\+M\+Service.\+Handle\+Client\+Comm (\begin{DoxyParamCaption}\item[{object}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 553 of file Service1.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede_a9b15b44864b5712dd7837bcaf0106ede_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_ae3faaa41bb6fea247b7604446adcce36}\label{class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_ae3faaa41bb6fea247b7604446adcce36}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!incoming\+Socket@{incoming\+Socket}}
+\index{incoming\+Socket@{incoming\+Socket}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{incoming\+Socket()}{incomingSocket()}}
+{\footnotesize\ttfamily static void Network\+Control\+Module.\+N\+C\+M\+Service.\+incoming\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 430 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_a48c06f4755b8f175f8ec2ff75ae44086}\label{class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_a48c06f4755b8f175f8ec2ff75ae44086}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Initialize\+Component@{Initialize\+Component}}
+\index{Initialize\+Component@{Initialize\+Component}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Initialize\+Component()}{InitializeComponent()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required method for Designer support -\/ do not modify the contents of this method with the code editor. 
+
+
+
+Definition at line 29 of file Service1.\+Designer.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_a48c06f4755b8f175f8ec2ff75ae44086_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_abe41fa817c46899d8af2574f1ea5be45}\label{class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_abe41fa817c46899d8af2574f1ea5be45}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Listen\+For\+Clients@{Listen\+For\+Clients}}
+\index{Listen\+For\+Clients@{Listen\+For\+Clients}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Listen\+For\+Clients()}{ListenForClients()}}
+{\footnotesize\ttfamily static void Network\+Control\+Module.\+N\+C\+M\+Service.\+Listen\+For\+Clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 524 of file Service1.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_abe41fa817c46899d8af2574f1ea5be45_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45_abe41fa817c46899d8af2574f1ea5be45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_ac3e1fb8571c4bf2f3ef682dc4942affb}\label{class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_ac3e1fb8571c4bf2f3ef682dc4942affb}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!On\+Start@{On\+Start}}
+\index{On\+Start@{On\+Start}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{On\+Start()}{OnStart()}}
+{\footnotesize\ttfamily override void Network\+Control\+Module.\+N\+C\+M\+Service.\+On\+Start (\begin{DoxyParamCaption}\item[{string \mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 99 of file Service1.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_ac3e1fb8571c4bf2f3ef682dc4942affb_ac3e1fb8571c4bf2f3ef682dc4942affb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a0071afdb16b84b1a1c6044f4fadea106_a0071afdb16b84b1a1c6044f4fadea106}\label{class_network_control_module_1_1_n_c_m_service_a0071afdb16b84b1a1c6044f4fadea106_a0071afdb16b84b1a1c6044f4fadea106}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!On\+Stop@{On\+Stop}}
+\index{On\+Stop@{On\+Stop}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{On\+Stop()}{OnStop()}}
+{\footnotesize\ttfamily override void Network\+Control\+Module.\+N\+C\+M\+Service.\+On\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 122 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_ac6f190aaf7a1736cb8573971d8276b71}\label{class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_ac6f190aaf7a1736cb8573971d8276b71}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!telnet\+Server@{telnet\+Server}}
+\index{telnet\+Server@{telnet\+Server}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{telnet\+Server()}{telnetServer()}}
+{\footnotesize\ttfamily static void Network\+Control\+Module.\+N\+C\+M\+Service.\+telnet\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 496 of file Service1.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_ac6f190aaf7a1736cb8573971d8276b71_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_af74640813b4eb6e484be7f8f5157c1f1}\label{class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_af74640813b4eb6e484be7f8f5157c1f1}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!timer1\+\_\+\+Elapsed@{timer1\+\_\+\+Elapsed}}
+\index{timer1\+\_\+\+Elapsed@{timer1\+\_\+\+Elapsed}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{timer1\+\_\+\+Elapsed()}{timer1\_Elapsed()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+timer1\+\_\+\+Elapsed (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 348 of file Service1.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_af74640813b4eb6e484be7f8f5157c1f1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_af74640813b4eb6e484be7f8f5157c1f1_af74640813b4eb6e484be7f8f5157c1f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_a629b4ddcdcacf076ce421cbc9bfb673a}\label{class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_a629b4ddcdcacf076ce421cbc9bfb673a}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!trythis@{trythis}}
+\index{trythis@{trythis}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{trythis()}{trythis()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+trythis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 891 of file Service1.\+cs.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a629b4ddcdcacf076ce421cbc9bfb673a_a629b4ddcdcacf076ce421cbc9bfb673a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_a2eb9b3d6a64f5d1f9b54beedf7776580}\label{class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_a2eb9b3d6a64f5d1f9b54beedf7776580}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!update\+Socket@{update\+Socket}}
+\index{update\+Socket@{update\+Socket}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{update\+Socket()}{updateSocket()}}
+{\footnotesize\ttfamily void Network\+Control\+Module.\+N\+C\+M\+Service.\+update\+Socket (\begin{DoxyParamCaption}\item[{string}]{command,  }\item[{string}]{host,  }\item[{int}]{fail\+Over\+Indicator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 376 of file Service1.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_a2eb9b3d6a64f5d1f9b54beedf7776580_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_network_control_module_1_1_n_c_m_service_a2eb9b3d6a64f5d1f9b54beedf7776580_a2eb9b3d6a64f5d1f9b54beedf7776580_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ae6f96d50f2b61113c6145d7e26aa5fc5_ae6f96d50f2b61113c6145d7e26aa5fc5}\label{class_network_control_module_1_1_n_c_m_service_ae6f96d50f2b61113c6145d7e26aa5fc5_ae6f96d50f2b61113c6145d7e26aa5fc5}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!components@{components}}
+\index{components@{components}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily System.\+Component\+Model.\+I\+Container Network\+Control\+Module.\+N\+C\+M\+Service.\+components = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required designer variable. 
+
+
+
+Definition at line 8 of file Service1.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ace92c48ec4175ca640d89283532f4187_ace92c48ec4175ca640d89283532f4187}\label{class_network_control_module_1_1_n_c_m_service_ace92c48ec4175ca640d89283532f4187_ace92c48ec4175ca640d89283532f4187}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!current\+State@{current\+State}}
+\index{current\+State@{current\+State}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{current\+State}{currentState}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+current\+State\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 74 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a00b9404eb670cc8753d62d9aa6de78a2_a00b9404eb670cc8753d62d9aa6de78a2}\label{class_network_control_module_1_1_n_c_m_service_a00b9404eb670cc8753d62d9aa6de78a2_a00b9404eb670cc8753d62d9aa6de78a2}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!cycle\+Running@{cycle\+Running}}
+\index{cycle\+Running@{cycle\+Running}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{cycle\+Running}{cycleRunning}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+cycle\+Running = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 78 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a52171126067f812651e8ec600b955a4f_a52171126067f812651e8ec600b955a4f}\label{class_network_control_module_1_1_n_c_m_service_a52171126067f812651e8ec600b955a4f_a52171126067f812651e8ec600b955a4f}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!daq\+Updates@{daq\+Updates}}
+\index{daq\+Updates@{daq\+Updates}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{daq\+Updates}{daqUpdates}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+daq\+Updates = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 66 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_a15da8461fc5889992cdd8429bb0a19f4}\label{class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_a15da8461fc5889992cdd8429bb0a19f4}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!event\+Log1@{event\+Log1}}
+\index{event\+Log1@{event\+Log1}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{event\+Log1}{eventLog1}}
+{\footnotesize\ttfamily System.\+Diagnostics.\+Event\+Log Network\+Control\+Module.\+N\+C\+M\+Service.\+event\+Log1}
+
+
+
+Definition at line 43 of file Service1.\+Designer.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_acd64ecc3594103d59ec4b3507dd7d5f2_acd64ecc3594103d59ec4b3507dd7d5f2}\label{class_network_control_module_1_1_n_c_m_service_acd64ecc3594103d59ec4b3507dd7d5f2_acd64ecc3594103d59ec4b3507dd7d5f2}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!failover\+Count@{failover\+Count}}
+\index{failover\+Count@{failover\+Count}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{failover\+Count}{failoverCount}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+failover\+Count = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 65 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a4549f05328c75ba8096aac96cd0978ce_a4549f05328c75ba8096aac96cd0978ce}\label{class_network_control_module_1_1_n_c_m_service_a4549f05328c75ba8096aac96cd0978ce_a4549f05328c75ba8096aac96cd0978ce}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!failover\+Host@{failover\+Host}}
+\index{failover\+Host@{failover\+Host}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{failover\+Host}{failoverHost}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+failover\+Host = \char`\"{}localhost\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 48 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a823af9c186f8b7e5045c27b7e227de26_a823af9c186f8b7e5045c27b7e227de26}\label{class_network_control_module_1_1_n_c_m_service_a823af9c186f8b7e5045c27b7e227de26_a823af9c186f8b7e5045c27b7e227de26}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!fail\+Over\+State@{fail\+Over\+State}}
+\index{fail\+Over\+State@{fail\+Over\+State}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{fail\+Over\+State}{failOverState}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+fail\+Over\+State = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 51 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a2f5f8b787ecaac67a859a5a0b059c76c_a2f5f8b787ecaac67a859a5a0b059c76c}\label{class_network_control_module_1_1_n_c_m_service_a2f5f8b787ecaac67a859a5a0b059c76c_a2f5f8b787ecaac67a859a5a0b059c76c}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!first\+Time\+In@{first\+Time\+In}}
+\index{first\+Time\+In@{first\+Time\+In}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{first\+Time\+In}{firstTimeIn}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+first\+Time\+In = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 76 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a8f9883195ab748484398e3e9ccce736a_a8f9883195ab748484398e3e9ccce736a}\label{class_network_control_module_1_1_n_c_m_service_a8f9883195ab748484398e3e9ccce736a_a8f9883195ab748484398e3e9ccce736a}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!full\+Outages@{full\+Outages}}
+\index{full\+Outages@{full\+Outages}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{full\+Outages}{fullOutages}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+full\+Outages = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 68 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_aa6ce1bb5b8cbce3a3162c84944d9a623_aa6ce1bb5b8cbce3a3162c84944d9a623}\label{class_network_control_module_1_1_n_c_m_service_aa6ce1bb5b8cbce3a3162c84944d9a623_aa6ce1bb5b8cbce3a3162c84944d9a623}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!good\+Failover\+Connect@{good\+Failover\+Connect}}
+\index{good\+Failover\+Connect@{good\+Failover\+Connect}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{good\+Failover\+Connect}{goodFailoverConnect}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+good\+Failover\+Connect = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 79 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_afb36f8bbf843e7e513681b46f70384a0_afb36f8bbf843e7e513681b46f70384a0}\label{class_network_control_module_1_1_n_c_m_service_afb36f8bbf843e7e513681b46f70384a0_afb36f8bbf843e7e513681b46f70384a0}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!host@{host}}
+\index{host@{host}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+host\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a65abf86625998d7123c57a354adfc927_a65abf86625998d7123c57a354adfc927}\label{class_network_control_module_1_1_n_c_m_service_a65abf86625998d7123c57a354adfc927_a65abf86625998d7123c57a354adfc927}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!last\+Telnet\+IP@{last\+Telnet\+IP}}
+\index{last\+Telnet\+IP@{last\+Telnet\+IP}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{last\+Telnet\+IP}{lastTelnetIP}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+last\+Telnet\+IP\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 72 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ad69f9823fdacc5b871a51641153fe4b4_ad69f9823fdacc5b871a51641153fe4b4}\label{class_network_control_module_1_1_n_c_m_service_ad69f9823fdacc5b871a51641153fe4b4_ad69f9823fdacc5b871a51641153fe4b4}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!last\+Telnet\+Time@{last\+Telnet\+Time}}
+\index{last\+Telnet\+Time@{last\+Telnet\+Time}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{last\+Telnet\+Time}{lastTelnetTime}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+last\+Telnet\+Time\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 73 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_aa537ca2966e1fed6b18325fd5857060c_aa537ca2966e1fed6b18325fd5857060c}\label{class_network_control_module_1_1_n_c_m_service_aa537ca2966e1fed6b18325fd5857060c_aa537ca2966e1fed6b18325fd5857060c}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!listen\+Thread@{listen\+Thread}}
+\index{listen\+Thread@{listen\+Thread}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{listen\+Thread}{listenThread}}
+{\footnotesize\ttfamily Thread Network\+Control\+Module.\+N\+C\+M\+Service.\+listen\+Thread\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 62 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_aca8900ea24fd0a5fc96ad29cda998f41_aca8900ea24fd0a5fc96ad29cda998f41}\label{class_network_control_module_1_1_n_c_m_service_aca8900ea24fd0a5fc96ad29cda998f41_aca8900ea24fd0a5fc96ad29cda998f41}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!max\+Wait\+Millisec@{max\+Wait\+Millisec}}
+\index{max\+Wait\+Millisec@{max\+Wait\+Millisec}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{max\+Wait\+Millisec}{maxWaitMillisec}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+max\+Wait\+Millisec = 20000\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 41 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a4b819f80512a24240d2f116dbd2e07c2_a4b819f80512a24240d2f116dbd2e07c2}\label{class_network_control_module_1_1_n_c_m_service_a4b819f80512a24240d2f116dbd2e07c2_a4b819f80512a24240d2f116dbd2e07c2}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!N\+C\+M\+Service\+Port@{N\+C\+M\+Service\+Port}}
+\index{N\+C\+M\+Service\+Port@{N\+C\+M\+Service\+Port}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{N\+C\+M\+Service\+Port}{NCMServicePort}}
+{\footnotesize\ttfamily const int Network\+Control\+Module.\+N\+C\+M\+Service.\+N\+C\+M\+Service\+Port = 3230\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 59 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_af2d65f81e2843c3a6a83810d0bc6627d_af2d65f81e2843c3a6a83810d0bc6627d}\label{class_network_control_module_1_1_n_c_m_service_af2d65f81e2843c3a6a83810d0bc6627d_af2d65f81e2843c3a6a83810d0bc6627d}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!no\+Finditerator@{no\+Finditerator}}
+\index{no\+Finditerator@{no\+Finditerator}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{no\+Finditerator}{noFinditerator}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+no\+Finditerator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 46 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a6617c8dea13c53f9d4c2cec604a0370f_a6617c8dea13c53f9d4c2cec604a0370f}\label{class_network_control_module_1_1_n_c_m_service_a6617c8dea13c53f9d4c2cec604a0370f_a6617c8dea13c53f9d4c2cec604a0370f}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!nuke@{nuke}}
+\index{nuke@{nuke}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{nuke}{nuke}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+nuke = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 55 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_acc23e0721fe2a56b83c20aca3cbb732a_acc23e0721fe2a56b83c20aca3cbb732a}\label{class_network_control_module_1_1_n_c_m_service_acc23e0721fe2a56b83c20aca3cbb732a_acc23e0721fe2a56b83c20aca3cbb732a}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!out\+Message@{out\+Message}}
+\index{out\+Message@{out\+Message}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{out\+Message}{outMessage}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+out\+Message\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 58 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_aa0ec0c03f5a1e63c2dc900d8994e3543_aa0ec0c03f5a1e63c2dc900d8994e3543}\label{class_network_control_module_1_1_n_c_m_service_aa0ec0c03f5a1e63c2dc900d8994e3543_aa0ec0c03f5a1e63c2dc900d8994e3543}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!port@{port}}
+\index{port@{port}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+port = 1433\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 42 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a17d56b15343f7ef3f57dd0bb7e0e7248_a17d56b15343f7ef3f57dd0bb7e0e7248}\label{class_network_control_module_1_1_n_c_m_service_a17d56b15343f7ef3f57dd0bb7e0e7248_a17d56b15343f7ef3f57dd0bb7e0e7248}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!primary\+Good@{primary\+Good}}
+\index{primary\+Good@{primary\+Good}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{primary\+Good}{primaryGood}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+primary\+Good\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 77 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_af70bdd7ffaa8c8327996fd4fa7904b77_af70bdd7ffaa8c8327996fd4fa7904b77}\label{class_network_control_module_1_1_n_c_m_service_af70bdd7ffaa8c8327996fd4fa7904b77_af70bdd7ffaa8c8327996fd4fa7904b77}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!primary\+Host@{primary\+Host}}
+\index{primary\+Host@{primary\+Host}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{primary\+Host}{primaryHost}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+primary\+Host = \char`\"{}grcbi\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a1f12d6b4206a3faaf85ea2c9612302dd_a1f12d6b4206a3faaf85ea2c9612302dd}\label{class_network_control_module_1_1_n_c_m_service_a1f12d6b4206a3faaf85ea2c9612302dd_a1f12d6b4206a3faaf85ea2c9612302dd}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Processing@{Processing}}
+\index{Processing@{Processing}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Processing}{Processing}}
+{\footnotesize\ttfamily bool Network\+Control\+Module.\+N\+C\+M\+Service.\+Processing = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 81 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_af6324ad1445566880df2051940007f36_af6324ad1445566880df2051940007f36}\label{class_network_control_module_1_1_n_c_m_service_af6324ad1445566880df2051940007f36_af6324ad1445566880df2051940007f36}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!recoveries@{recoveries}}
+\index{recoveries@{recoveries}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{recoveries}{recoveries}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+recoveries = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 69 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a6c1df739cb198464f9ad3276e2a08db7_a6c1df739cb198464f9ad3276e2a08db7}\label{class_network_control_module_1_1_n_c_m_service_a6c1df739cb198464f9ad3276e2a08db7_a6c1df739cb198464f9ad3276e2a08db7}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Recovery\+In\+Progress@{Recovery\+In\+Progress}}
+\index{Recovery\+In\+Progress@{Recovery\+In\+Progress}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Recovery\+In\+Progress}{RecoveryInProgress}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+Recovery\+In\+Progress = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 75 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a6da1f49b1704195520c2893fc0de3b89_a6da1f49b1704195520c2893fc0de3b89}\label{class_network_control_module_1_1_n_c_m_service_a6da1f49b1704195520c2893fc0de3b89_a6da1f49b1704195520c2893fc0de3b89}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!savehost@{savehost}}
+\index{savehost@{savehost}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{savehost}{savehost}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+savehost = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 54 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_aba0aeb4a585fcc724110d66a1f27c0d7_aba0aeb4a585fcc724110d66a1f27c0d7}\label{class_network_control_module_1_1_n_c_m_service_aba0aeb4a585fcc724110d66a1f27c0d7_aba0aeb4a585fcc724110d66a1f27c0d7}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!service\+Port@{service\+Port}}
+\index{service\+Port@{service\+Port}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{service\+Port}{servicePort}}
+{\footnotesize\ttfamily const int Network\+Control\+Module.\+N\+C\+M\+Service.\+service\+Port = 3232\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 52 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a90c351d01d1f493fb7023356554b55b0_a90c351d01d1f493fb7023356554b55b0}\label{class_network_control_module_1_1_n_c_m_service_a90c351d01d1f493fb7023356554b55b0_a90c351d01d1f493fb7023356554b55b0}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!socket\+Connect\+Attempts@{socket\+Connect\+Attempts}}
+\index{socket\+Connect\+Attempts@{socket\+Connect\+Attempts}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{socket\+Connect\+Attempts}{socketConnectAttempts}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+socket\+Connect\+Attempts\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 53 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_af75b07219173586520a505c3f722bed0_af75b07219173586520a505c3f722bed0}\label{class_network_control_module_1_1_n_c_m_service_af75b07219173586520a505c3f722bed0_af75b07219173586520a505c3f722bed0}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!socket\+Listener\+Thread@{socket\+Listener\+Thread}}
+\index{socket\+Listener\+Thread@{socket\+Listener\+Thread}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{socket\+Listener\+Thread}{socketListenerThread}}
+{\footnotesize\ttfamily Thread Network\+Control\+Module.\+N\+C\+M\+Service.\+socket\+Listener\+Thread = new System.\+Threading.\+Thread(new Thread\+Start(\hyperlink{class_network_control_module_1_1_n_c_m_service_ae3faaa41bb6fea247b7604446adcce36_ae3faaa41bb6fea247b7604446adcce36}{incoming\+Socket}))\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 56 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a7050951d87836dba8d38530b29e04c2c_a7050951d87836dba8d38530b29e04c2c}\label{class_network_control_module_1_1_n_c_m_service_a7050951d87836dba8d38530b29e04c2c_a7050951d87836dba8d38530b29e04c2c}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!ssl@{ssl}}
+\index{ssl@{ssl}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{ssl}{ssl}}
+{\footnotesize\ttfamily bool Network\+Control\+Module.\+N\+C\+M\+Service.\+ssl = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 40 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a822c3f8f6f983fd2a445eaf2ce179042_a822c3f8f6f983fd2a445eaf2ce179042}\label{class_network_control_module_1_1_n_c_m_service_a822c3f8f6f983fd2a445eaf2ce179042_a822c3f8f6f983fd2a445eaf2ce179042}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!success@{success}}
+\index{success@{success}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{success}{success}}
+{\footnotesize\ttfamily bool Network\+Control\+Module.\+N\+C\+M\+Service.\+success\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 43 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a51450ea83ed66fd2d8e8a0bde66d3fb2_a51450ea83ed66fd2d8e8a0bde66d3fb2}\label{class_network_control_module_1_1_n_c_m_service_a51450ea83ed66fd2d8e8a0bde66d3fb2_a51450ea83ed66fd2d8e8a0bde66d3fb2}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!successful@{successful}}
+\index{successful@{successful}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{successful}{successful}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+successful\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 50 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a7cd20c3e61895e554580c1c108c70ad0_a7cd20c3e61895e554580c1c108c70ad0}\label{class_network_control_module_1_1_n_c_m_service_a7cd20c3e61895e554580c1c108c70ad0_a7cd20c3e61895e554580c1c108c70ad0}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!tcp\+Primary\+Listener@{tcp\+Primary\+Listener}}
+\index{tcp\+Primary\+Listener@{tcp\+Primary\+Listener}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{tcp\+Primary\+Listener}{tcpPrimaryListener}}
+{\footnotesize\ttfamily Tcp\+Listener Network\+Control\+Module.\+N\+C\+M\+Service.\+tcp\+Primary\+Listener\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 61 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a2366654711a67324ed7f06bee5212552_a2366654711a67324ed7f06bee5212552}\label{class_network_control_module_1_1_n_c_m_service_a2366654711a67324ed7f06bee5212552_a2366654711a67324ed7f06bee5212552}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!telnet\+Connections@{telnet\+Connections}}
+\index{telnet\+Connections@{telnet\+Connections}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{telnet\+Connections}{telnetConnections}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+telnet\+Connections = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 67 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a563d2cddc2542a5c1e5734060a62d527_a563d2cddc2542a5c1e5734060a62d527}\label{class_network_control_module_1_1_n_c_m_service_a563d2cddc2542a5c1e5734060a62d527_a563d2cddc2542a5c1e5734060a62d527}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Telnet\+Listener\+Thread@{Telnet\+Listener\+Thread}}
+\index{Telnet\+Listener\+Thread@{Telnet\+Listener\+Thread}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Telnet\+Listener\+Thread}{TelnetListenerThread}}
+{\footnotesize\ttfamily Thread Network\+Control\+Module.\+N\+C\+M\+Service.\+Telnet\+Listener\+Thread = new System.\+Threading.\+Thread(new Thread\+Start(\hyperlink{class_network_control_module_1_1_n_c_m_service_ac6f190aaf7a1736cb8573971d8276b71_ac6f190aaf7a1736cb8573971d8276b71}{telnet\+Server}))\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 57 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_afe66ea01cc1afa2471e6878af261f66f_afe66ea01cc1afa2471e6878af261f66f}\label{class_network_control_module_1_1_n_c_m_service_afe66ea01cc1afa2471e6878af261f66f_afe66ea01cc1afa2471e6878af261f66f}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Telnet\+Port@{Telnet\+Port}}
+\index{Telnet\+Port@{Telnet\+Port}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Telnet\+Port}{TelnetPort}}
+{\footnotesize\ttfamily const int Network\+Control\+Module.\+N\+C\+M\+Service.\+Telnet\+Port = 3231\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 60 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a88e9a864ebb4743a210645bd679e318d_a88e9a864ebb4743a210645bd679e318d}\label{class_network_control_module_1_1_n_c_m_service_a88e9a864ebb4743a210645bd679e318d_a88e9a864ebb4743a210645bd679e318d}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!testprimary\+Host@{testprimary\+Host}}
+\index{testprimary\+Host@{testprimary\+Host}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{testprimary\+Host}{testprimaryHost}}
+{\footnotesize\ttfamily string Network\+Control\+Module.\+N\+C\+M\+Service.\+testprimary\+Host = \char`\"{}grcbi\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 49 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_ab6c3ae6d10ff37f13707e7606d411d4c}\label{class_network_control_module_1_1_n_c_m_service_ab6c3ae6d10ff37f13707e7606d411d4c_ab6c3ae6d10ff37f13707e7606d411d4c}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!timer1@{timer1}}
+\index{timer1@{timer1}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{timer1}{timer1}}
+{\footnotesize\ttfamily System.\+Timers.\+Timer Network\+Control\+Module.\+N\+C\+M\+Service.\+timer1 = new System.\+Timers.\+Timer()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 44 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a4aa4a66f2e53d0fd3327c92cc2c2c6b8_a4aa4a66f2e53d0fd3327c92cc2c2c6b8}\label{class_network_control_module_1_1_n_c_m_service_a4aa4a66f2e53d0fd3327c92cc2c2c6b8_a4aa4a66f2e53d0fd3327c92cc2c2c6b8}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!Total\+Failure@{Total\+Failure}}
+\index{Total\+Failure@{Total\+Failure}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{Total\+Failure}{TotalFailure}}
+{\footnotesize\ttfamily bool Network\+Control\+Module.\+N\+C\+M\+Service.\+Total\+Failure = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 80 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a6e0fb6e7b9a63786ec21a7a5e2451282_a6e0fb6e7b9a63786ec21a7a5e2451282}\label{class_network_control_module_1_1_n_c_m_service_a6e0fb6e7b9a63786ec21a7a5e2451282_a6e0fb6e7b9a63786ec21a7a5e2451282}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!total\+Socket\+Receive@{total\+Socket\+Receive}}
+\index{total\+Socket\+Receive@{total\+Socket\+Receive}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{total\+Socket\+Receive}{totalSocketReceive}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+total\+Socket\+Receive = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 70 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_ab1b68ac1880d7f67ffe80bec463558e8_ab1b68ac1880d7f67ffe80bec463558e8}\label{class_network_control_module_1_1_n_c_m_service_ab1b68ac1880d7f67ffe80bec463558e8_ab1b68ac1880d7f67ffe80bec463558e8}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!total\+Socket\+Transmit@{total\+Socket\+Transmit}}
+\index{total\+Socket\+Transmit@{total\+Socket\+Transmit}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{total\+Socket\+Transmit}{totalSocketTransmit}}
+{\footnotesize\ttfamily int Network\+Control\+Module.\+N\+C\+M\+Service.\+total\+Socket\+Transmit = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 71 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a682ce1c27f753ecb0642a81bd7f59946_a682ce1c27f753ecb0642a81bd7f59946}\label{class_network_control_module_1_1_n_c_m_service_a682ce1c27f753ecb0642a81bd7f59946_a682ce1c27f753ecb0642a81bd7f59946}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!uptime\+Now@{uptime\+Now}}
+\index{uptime\+Now@{uptime\+Now}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{uptime\+Now}{uptimeNow}}
+{\footnotesize\ttfamily Date\+Time Network\+Control\+Module.\+N\+C\+M\+Service.\+uptime\+Now\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 64 of file Service1.\+cs.
+
+\mbox{\Hypertarget{class_network_control_module_1_1_n_c_m_service_a198846e0856da7ab59c64b64deed1724_a198846e0856da7ab59c64b64deed1724}\label{class_network_control_module_1_1_n_c_m_service_a198846e0856da7ab59c64b64deed1724_a198846e0856da7ab59c64b64deed1724}} 
+\index{Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}!uptime\+Start@{uptime\+Start}}
+\index{uptime\+Start@{uptime\+Start}!Network\+Control\+Module\+::\+N\+C\+M\+Service@{Network\+Control\+Module\+::\+N\+C\+M\+Service}}
+\subsubsection{\texorpdfstring{uptime\+Start}{uptimeStart}}
+{\footnotesize\ttfamily Date\+Time Network\+Control\+Module.\+N\+C\+M\+Service.\+uptime\+Start\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 63 of file Service1.\+cs.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_service1_8cs}{Service1.\+cs}\item 
+\hyperlink{_service1_8_designer_8cs}{Service1.\+Designer.\+cs}\end{DoxyCompactItemize}

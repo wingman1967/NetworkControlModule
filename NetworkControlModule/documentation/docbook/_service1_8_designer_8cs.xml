@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_service1_8_designer_8cs">
+    <title>Service1.Designer.cs File Reference</title>
+<para>Include dependency diagram for Service1.Designer.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_service1_8_designer_8cs__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Service1.Designer.cs</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="_service1_8_designer_8cs__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_network_control_module_1_1_n_c_m_service">NetworkControlModule::NCMService</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_network_control_module">NetworkControlModule</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/hinesj/Documents/Visual Studio 2012/Projects/NetworkControlModule/NetworkControlModule/Service1.Designer.cs</para>
+    </simplesect>
+    <literallayout><computeroutput>
+1 <emphasis class="keyword">namespace&#32;</emphasis><link linkend="namespace_network_control_module">NetworkControlModule</link>
+2 {
+3 &#32;&#32;&#32;&#32;<emphasis class="keyword">partial&#32;class&#32;</emphasis>NCMService
+4 &#32;&#32;&#32;&#32;{
+<link linkend="class_network_control_module_1_1_n_c_m_service_ae6f96d50f2b61113c6145d7e26aa5fc5_1ae6f96d50f2b61113c6145d7e26aa5fc5">8 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<link linkend="namespace_system">System</link>.ComponentModel.IContainer&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ae6f96d50f2b61113c6145d7e26aa5fc5_1ae6f96d50f2b61113c6145d7e26aa5fc5">components</link>&#32;=&#32;null;
+9 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a7151765de6b7e9c48e833348a94076ec_1a7151765de6b7e9c48e833348a94076ec">14 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">protected</emphasis>&#32;<emphasis class="keyword">override</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a7151765de6b7e9c48e833348a94076ec_1a7151765de6b7e9c48e833348a94076ec">Dispose</link>(<emphasis class="keywordtype">bool</emphasis>&#32;disposing)
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keywordflow">if</emphasis>&#32;(disposing&#32;&amp;&amp;&#32;(<link linkend="class_network_control_module_1_1_n_c_m_service_ae6f96d50f2b61113c6145d7e26aa5fc5_1ae6f96d50f2b61113c6145d7e26aa5fc5">components</link>&#32;!=&#32;null))
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_ae6f96d50f2b61113c6145d7e26aa5fc5_1ae6f96d50f2b61113c6145d7e26aa5fc5">components</link>.Dispose();
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;base.Dispose(disposing);
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+22 
+23 <emphasis class="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#region&#32;Component&#32;Designer&#32;generated&#32;code</emphasis>
+24 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_1a48c06f4755b8f175f8ec2ff75ae44086">29 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">private</emphasis>&#32;<emphasis class="keywordtype">void</emphasis>&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a48c06f4755b8f175f8ec2ff75ae44086_1a48c06f4755b8f175f8ec2ff75ae44086">InitializeComponent</link>()
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>&#32;=&#32;<emphasis class="keyword">new</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog();
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((<link linkend="namespace_system">System</link>.ComponentModel.ISupportInitialize)(this.<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>)).BeginInit();
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;NCMService</emphasis>
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="comment">//&#32;</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.ServiceName&#32;=&#32;<emphasis class="stringliteral">&quot;NCMService&quot;</emphasis>;
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((<link linkend="namespace_system">System</link>.ComponentModel.ISupportInitialize)(this.<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>)).EndInit();
+38 
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+40 
+41 <emphasis class="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endregion</emphasis>
+42 
+<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">43 </link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis class="keyword">public</emphasis>&#32;<link linkend="namespace_system">System</link>.Diagnostics.EventLog&#32;<link linkend="class_network_control_module_1_1_n_c_m_service_a15da8461fc5889992cdd8429bb0a19f4_1a15da8461fc5889992cdd8429bb0a19f4">eventLog1</link>;
+44 
+45 &#32;&#32;&#32;&#32;}
+46 }
+    </computeroutput></literallayout>
+</section>

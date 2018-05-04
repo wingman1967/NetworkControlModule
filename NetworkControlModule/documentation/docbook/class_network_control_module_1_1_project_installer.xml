@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_network_control_module_1_1_project_installer">
+<title>NetworkControlModule::ProjectInstaller class Reference</title>
+<para>Inheritance diagram for NetworkControlModule::ProjectInstaller</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="class_network_control_module_1_1_project_installer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for NetworkControlModule::ProjectInstaller</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="class_network_control_module_1_1_project_installer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components<para><emphasis>&lt;summary&gt;
+Required designer variable.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ServiceProcess.ServiceInstaller serviceInstaller1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_network_control_module_1_1_project_installer_a88d1b45d81432d1d530cd3d738f2ff30_1a88d1b45d81432d1d530cd3d738f2ff30">ProjectInstaller</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_network_control_module_1_1_project_installer_a0b07320d4bce5c32a4b36ff6f3a7c5b0_1a0b07320d4bce5c32a4b36ff6f3a7c5b0">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt; 
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_network_control_module_1_1_project_installer_a205c795569f8488c48caca46daffd6a1_1a205c795569f8488c48caca46daffd6a1">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>System.ComponentModel.IContainer NetworkControlModule.ProjectInstaller.components</title>                
+                <para>Definition at line 8 of file ProjectInstaller.Designer.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ProjectInstaller.Designer.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_network_control_module_1_1_project_installer_a88d1b45d81432d1d530cd3d738f2ff30_1a88d1b45d81432d1d530cd3d738f2ff30">
+                <title>NetworkControlModule.ProjectInstaller.ProjectInstaller ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_network_control_module_1_1_project_installer_a0b07320d4bce5c32a4b36ff6f3a7c5b0_1a0b07320d4bce5c32a4b36ff6f3a7c5b0">
+                <title>override void NetworkControlModule.ProjectInstaller.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt; 
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>disposing</entry>
+                                <entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_network_control_module_1_1_project_installer_a205c795569f8488c48caca46daffd6a1_1a205c795569f8488c48caca46daffd6a1">
+                <title>void NetworkControlModule.ProjectInstaller.InitializeComponent ()</title> <emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

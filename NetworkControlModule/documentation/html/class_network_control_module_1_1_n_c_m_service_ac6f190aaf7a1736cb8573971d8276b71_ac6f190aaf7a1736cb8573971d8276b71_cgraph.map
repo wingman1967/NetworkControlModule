@@ -1,0 +1,4 @@
+<map id="NetworkControlModule.NCMService.telnetServer" name="NetworkControlModule.NCMService.telnetServer">
+<area shape="rect" id="node2" href="$class_network_control_module_1_1_n_c_m_service_abe41fa817c46899d8af2574f1ea5be45.html#abe41fa817c46899d8af2574f1ea5be45" title="NetworkControlModule.NCMService.\lListenForClients" alt="" coords="316,5,547,47"/>
+<area shape="rect" id="node3" href="$class_network_control_module_1_1_n_c_m_service_a9b15b44864b5712dd7837bcaf0106ede.html#a9b15b44864b5712dd7837bcaf0106ede" title="NetworkControlModule.NCMService.\lHandleClientComm" alt="" coords="595,5,825,47"/>
+</map>

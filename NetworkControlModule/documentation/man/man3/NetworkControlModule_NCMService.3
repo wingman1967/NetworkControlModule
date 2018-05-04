@@ -1,0 +1,494 @@
+.TH "NetworkControlModule.NCMService" 3 "Fri Mar 17 2017" "Network Control Module for Data Acquisition" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NetworkControlModule.NCMService
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits ServiceBase\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNCMService\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "System\&.Diagnostics\&.EventLog \fBeventLog1\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBOnStart\fP (string[] args)"
+.br
+.ti -1c
+.RI "override void \fBOnStop\fP ()"
+.br
+.ti -1c
+.RI "override void \fBDispose\fP (bool disposing)"
+.br
+.RI "Clean up any resources being used\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcheckConnection\fP ()"
+.br
+.ti -1c
+.RI "void \fBtimer1_Elapsed\fP (object sender, EventArgs e)"
+.br
+.ti -1c
+.RI "void \fBupdateSocket\fP (string command, string \fBhost\fP, int failOverIndicator)"
+.br
+.ti -1c
+.RI "void \fBFailoverRecovery\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckPrimary\fP ()"
+.br
+.ti -1c
+.RI "void \fBtrythis\fP ()"
+.br
+.ti -1c
+.RI "void \fBCheckHosts\fP ()"
+.br
+.ti -1c
+.RI "void \fBengageFailoverRedirection\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitializeComponent\fP ()"
+.br
+.RI "Required method for Designer support - do not modify the contents of this method with the code editor\&. "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBincomingSocket\fP ()"
+.br
+.ti -1c
+.RI "static void \fBtelnetServer\fP ()"
+.br
+.ti -1c
+.RI "static void \fBListenForClients\fP ()"
+.br
+.ti -1c
+.RI "static void \fBHandleClientComm\fP (object client)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBssl\fP = false"
+.br
+.ti -1c
+.RI "int \fBmaxWaitMillisec\fP = 20000"
+.br
+.ti -1c
+.RI "int \fBport\fP = 1433"
+.br
+.ti -1c
+.RI "bool \fBsuccess\fP"
+.br
+.ti -1c
+.RI "System\&.Timers\&.Timer \fBtimer1\fP = new System\&.Timers\&.Timer()"
+.br
+.ti -1c
+.RI "string \fBhost\fP"
+.br
+.ti -1c
+.RI "int \fBnoFinditerator\fP"
+.br
+.ti -1c
+.RI "string \fBprimaryHost\fP = 'grcbi'"
+.br
+.ti -1c
+.RI "string \fBfailoverHost\fP = 'localhost'"
+.br
+.ti -1c
+.RI "string \fBtestprimaryHost\fP = 'grcbi'"
+.br
+.ti -1c
+.RI "int \fBsuccessful\fP"
+.br
+.ti -1c
+.RI "int \fBfailOverState\fP = 1"
+.br
+.ti -1c
+.RI "const int \fBservicePort\fP = 3232"
+.br
+.ti -1c
+.RI "int \fBsocketConnectAttempts\fP"
+.br
+.ti -1c
+.RI "string \fBsavehost\fP = ''"
+.br
+.ti -1c
+.RI "Thread \fBsocketListenerThread\fP = new System\&.Threading\&.Thread(new ThreadStart(\fBincomingSocket\fP))"
+.br
+.ti -1c
+.RI "Thread \fBTelnetListenerThread\fP = new System\&.Threading\&.Thread(new ThreadStart(\fBtelnetServer\fP))"
+.br
+.ti -1c
+.RI "const int \fBNCMServicePort\fP = 3230"
+.br
+.ti -1c
+.RI "const int \fBTelnetPort\fP = 3231"
+.br
+.ti -1c
+.RI "int \fBfirstTimeIn\fP = 1"
+.br
+.ti -1c
+.RI "int \fBprimaryGood\fP"
+.br
+.ti -1c
+.RI "int \fBcycleRunning\fP = 0"
+.br
+.ti -1c
+.RI "bool \fBTotalFailure\fP = false"
+.br
+.ti -1c
+.RI "bool \fBProcessing\fP = false"
+.br
+.ti -1c
+.RI "System\&.ComponentModel\&.IContainer \fBcomponents\fP = null"
+.br
+.RI "Required designer variable\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBnuke\fP = 0"
+.br
+.ti -1c
+.RI "static string \fBoutMessage\fP"
+.br
+.ti -1c
+.RI "static TcpListener \fBtcpPrimaryListener\fP"
+.br
+.ti -1c
+.RI "static Thread \fBlistenThread\fP"
+.br
+.ti -1c
+.RI "static DateTime \fBuptimeStart\fP"
+.br
+.ti -1c
+.RI "static DateTime \fBuptimeNow\fP"
+.br
+.ti -1c
+.RI "static int \fBfailoverCount\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBdaqUpdates\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBtelnetConnections\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBfullOutages\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBrecoveries\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBtotalSocketReceive\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBtotalSocketTransmit\fP = 0"
+.br
+.ti -1c
+.RI "static string \fBlastTelnetIP\fP"
+.br
+.ti -1c
+.RI "static string \fBlastTelnetTime\fP"
+.br
+.ti -1c
+.RI "static string \fBcurrentState\fP"
+.br
+.ti -1c
+.RI "static int \fBRecoveryInProgress\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBgoodFailoverConnect\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 20 of file Service1\&.cs\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NetworkControlModule\&.NCMService\&.NCMService ()"
+
+.PP
+Definition at line 85 of file Service1\&.cs\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void NetworkControlModule\&.NCMService\&.checkConnection ()\fC [private]\fP"
+
+.PP
+Definition at line 131 of file Service1\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.CheckHosts ()\fC [private]\fP"
+
+.PP
+Definition at line 908 of file Service1\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.checkPrimary ()\fC [private]\fP"
+
+.PP
+Definition at line 876 of file Service1\&.cs\&.
+.SS "override void NetworkControlModule\&.NCMService\&.Dispose (bool disposing)\fC [protected]\fP"
+
+.PP
+Clean up any resources being used\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdisposing\fP true if managed resources should be disposed; otherwise, false\&.
+.RE
+.PP
+
+.PP
+Definition at line 14 of file Service1\&.Designer\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.engageFailoverRedirection ()\fC [private]\fP"
+
+.PP
+Definition at line 924 of file Service1\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.FailoverRecovery ()\fC [private]\fP"
+
+.PP
+Definition at line 745 of file Service1\&.cs\&.
+.SS "static void NetworkControlModule\&.NCMService\&.HandleClientComm (object client)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 553 of file Service1\&.cs\&.
+.SS "static void NetworkControlModule\&.NCMService\&.incomingSocket ()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 430 of file Service1\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.InitializeComponent ()\fC [private]\fP"
+
+.PP
+Required method for Designer support - do not modify the contents of this method with the code editor\&. 
+.PP
+Definition at line 29 of file Service1\&.Designer\&.cs\&.
+.SS "static void NetworkControlModule\&.NCMService\&.ListenForClients ()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 524 of file Service1\&.cs\&.
+.SS "override void NetworkControlModule\&.NCMService\&.OnStart (string [] args)\fC [protected]\fP"
+
+.PP
+Definition at line 99 of file Service1\&.cs\&.
+.SS "override void NetworkControlModule\&.NCMService\&.OnStop ()\fC [protected]\fP"
+
+.PP
+Definition at line 122 of file Service1\&.cs\&.
+.SS "static void NetworkControlModule\&.NCMService\&.telnetServer ()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 496 of file Service1\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.timer1_Elapsed (object sender, EventArgs e)\fC [private]\fP"
+
+.PP
+Definition at line 348 of file Service1\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.trythis ()\fC [private]\fP"
+
+.PP
+Definition at line 891 of file Service1\&.cs\&.
+.SS "void NetworkControlModule\&.NCMService\&.updateSocket (string command, string host, int failOverIndicator)\fC [private]\fP"
+
+.PP
+Definition at line 376 of file Service1\&.cs\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "System\&.ComponentModel\&.IContainer NetworkControlModule\&.NCMService\&.components = null\fC [private]\fP"
+
+.PP
+Required designer variable\&. 
+.PP
+Definition at line 8 of file Service1\&.Designer\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.currentState\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 74 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.cycleRunning = 0\fC [private]\fP"
+
+.PP
+Definition at line 78 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.daqUpdates = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 66 of file Service1\&.cs\&.
+.SS "System\&.Diagnostics\&.EventLog NetworkControlModule\&.NCMService\&.eventLog1"
+
+.PP
+Definition at line 43 of file Service1\&.Designer\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.failoverCount = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 65 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.failoverHost = 'localhost'\fC [private]\fP"
+
+.PP
+Definition at line 48 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.failOverState = 1\fC [private]\fP"
+
+.PP
+Definition at line 51 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.firstTimeIn = 1\fC [private]\fP"
+
+.PP
+Definition at line 76 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.fullOutages = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 68 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.goodFailoverConnect = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 79 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.host\fC [private]\fP"
+
+.PP
+Definition at line 45 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.lastTelnetIP\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 72 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.lastTelnetTime\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 73 of file Service1\&.cs\&.
+.SS "Thread NetworkControlModule\&.NCMService\&.listenThread\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 62 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.maxWaitMillisec = 20000\fC [private]\fP"
+
+.PP
+Definition at line 41 of file Service1\&.cs\&.
+.SS "const int NetworkControlModule\&.NCMService\&.NCMServicePort = 3230\fC [private]\fP"
+
+.PP
+Definition at line 59 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.noFinditerator\fC [private]\fP"
+
+.PP
+Definition at line 46 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.nuke = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 55 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.outMessage\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 58 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.port = 1433\fC [private]\fP"
+
+.PP
+Definition at line 42 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.primaryGood\fC [private]\fP"
+
+.PP
+Definition at line 77 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.primaryHost = 'grcbi'\fC [private]\fP"
+
+.PP
+Definition at line 47 of file Service1\&.cs\&.
+.SS "bool NetworkControlModule\&.NCMService\&.Processing = false\fC [private]\fP"
+
+.PP
+Definition at line 81 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.recoveries = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 69 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.RecoveryInProgress = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 75 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.savehost = ''\fC [private]\fP"
+
+.PP
+Definition at line 54 of file Service1\&.cs\&.
+.SS "const int NetworkControlModule\&.NCMService\&.servicePort = 3232\fC [private]\fP"
+
+.PP
+Definition at line 52 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.socketConnectAttempts\fC [private]\fP"
+
+.PP
+Definition at line 53 of file Service1\&.cs\&.
+.SS "Thread NetworkControlModule\&.NCMService\&.socketListenerThread = new System\&.Threading\&.Thread(new ThreadStart(\fBincomingSocket\fP))\fC [private]\fP"
+
+.PP
+Definition at line 56 of file Service1\&.cs\&.
+.SS "bool NetworkControlModule\&.NCMService\&.ssl = false\fC [private]\fP"
+
+.PP
+Definition at line 40 of file Service1\&.cs\&.
+.SS "bool NetworkControlModule\&.NCMService\&.success\fC [private]\fP"
+
+.PP
+Definition at line 43 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.successful\fC [private]\fP"
+
+.PP
+Definition at line 50 of file Service1\&.cs\&.
+.SS "TcpListener NetworkControlModule\&.NCMService\&.tcpPrimaryListener\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 61 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.telnetConnections = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 67 of file Service1\&.cs\&.
+.SS "Thread NetworkControlModule\&.NCMService\&.TelnetListenerThread = new System\&.Threading\&.Thread(new ThreadStart(\fBtelnetServer\fP))\fC [private]\fP"
+
+.PP
+Definition at line 57 of file Service1\&.cs\&.
+.SS "const int NetworkControlModule\&.NCMService\&.TelnetPort = 3231\fC [private]\fP"
+
+.PP
+Definition at line 60 of file Service1\&.cs\&.
+.SS "string NetworkControlModule\&.NCMService\&.testprimaryHost = 'grcbi'\fC [private]\fP"
+
+.PP
+Definition at line 49 of file Service1\&.cs\&.
+.SS "System\&.Timers\&.Timer NetworkControlModule\&.NCMService\&.timer1 = new System\&.Timers\&.Timer()\fC [private]\fP"
+
+.PP
+Definition at line 44 of file Service1\&.cs\&.
+.SS "bool NetworkControlModule\&.NCMService\&.TotalFailure = false\fC [private]\fP"
+
+.PP
+Definition at line 80 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.totalSocketReceive = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 70 of file Service1\&.cs\&.
+.SS "int NetworkControlModule\&.NCMService\&.totalSocketTransmit = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 71 of file Service1\&.cs\&.
+.SS "DateTime NetworkControlModule\&.NCMService\&.uptimeNow\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 64 of file Service1\&.cs\&.
+.SS "DateTime NetworkControlModule\&.NCMService\&.uptimeStart\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 63 of file Service1\&.cs\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Network Control Module for Data Acquisition from the source code\&.
